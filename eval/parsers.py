@@ -16,7 +16,7 @@ if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 ROOT = Path(__file__).resolve().parents[1]
-DATASETS = [ROOT / 'data/golden/quotes-v1', ROOT / 'data/synthetic/edge-cases']
+
 ITEM = re.compile(r'line_items\[(\d+)\]\.')
 TABLE_COLUMNS = 6  # the golden quotes' line-item tables: part, qty, unit, extended, lead days, MOQ
 
@@ -82,8 +82,10 @@ def measure_document(golden: dict, segment, parse_seconds: float) -> dict:
 def run(parser: str, out_dir: Path = ROOT / 'eval/reports') -> dict:
     from eval.run import parse_with
     from extract.boundaries import split_quotes
+    from eval.datasets import golden_dataset, path
+    golden = path(golden_dataset())
     rows, parsed_cache = [], {}
-    for dataset in DATASETS:
+    for dataset in [golden, ROOT / 'data/synthetic/edge-cases']:
         for label in sorted(dataset.glob('*.json')):
             g = json.loads(label.read_text())
             source = dataset / g.get('source', g['document_id'] + '.pdf')
@@ -102,8 +104,8 @@ def run(parser: str, out_dir: Path = ROOT / 'eval/reports') -> dict:
         'documents': len(rows), 'spans': total_spans,
         'exact_rate': round(sum(r['exact_rate'] * r['spans'] for r in rows) / total_spans, 4) if total_spans else None,
         'cer': mean('cer'), 'cer_scanned': mean('cer', lambda r: r['ocr']),
-        'cells_recovered': sum(r['cells_recovered'] for r in rows if r['dataset'] == 'quotes-v1'),
-        'cells_expected': sum(r['cells_expected'] for r in rows if r['dataset'] == 'quotes-v1'),
+        'cells_recovered': sum(r['cells_recovered'] for r in rows if r['dataset'] == golden.name),
+        'cells_expected': sum(r['cells_expected'] for r in rows if r['dataset'] == golden.name),
         'mean_iou': mean('mean_iou'),
         'parse_p50_s': round(statistics.median(s for _, s in parsed_cache.values()), 2),
         'parse_max_s': round(max(s for _, s in parsed_cache.values()), 2),

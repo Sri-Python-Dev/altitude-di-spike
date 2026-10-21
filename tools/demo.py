@@ -18,7 +18,7 @@ RULES = ROOT / 'rules/quote_flags.json'
 BASELINE = ROOT / 'rules/quote_flags.baseline.json'
 INBOX = Path(os.getenv('ALTITUDE_INBOX', ROOT / 'data/inbox'))
 STATE = Path(os.getenv('ALTITUDE_STATE_DIR', ROOT / 'data/state'))
-DATASETS = ['data/golden/quotes-v1', 'data/synthetic/edge-cases', 'data/synthetic']
+
 DEMO_SUPPLIER = 'Lone Star Machining Inc'
 LIMIT_S = 120
 
@@ -75,17 +75,20 @@ def check() -> int:
     if problems:
         print(f'\nNot running the harness: fix {", ".join(problems)} first.')
         return 1
+    from eval.datasets import harness_datasets, path
     from eval.run import run
-    print(f'\nRunning the harness on {", ".join(DATASETS)} …')
+    datasets = harness_datasets()
+    print(f'\nRunning the harness on {", ".join(datasets)} …')
     started = time.perf_counter()
-    report = run([ROOT / d for d in DATASETS], 'current', command='make demo-check')
+    report = run([path(d) for d in datasets], 'current', command='make demo-check')
     elapsed = time.perf_counter() - started
     ok(f'Harness under {LIMIT_S}s', elapsed < LIMIT_S, f'{elapsed:.1f}s for {report["document_count"]} documents')
     for case in report['edge_case_summary']:
         ok(f'Edge case: {case["case"]}', case['pass'], case['what_happened'])
-    currency = report['fields'].get('currency', {})
-    ok('Currency row shows the demo miss', currency.get('worst_doc') == 'quote-g-dollar',
-       f'accuracy {currency.get("accuracy")}, worst doc {currency.get("worst_doc")}')
+    if 'data/synthetic' in datasets:  # the currency demo quote lives there
+        currency = report['fields'].get('currency', {})
+        ok('Currency row shows the demo miss', currency.get('worst_doc') == 'quote-g-dollar',
+           f'accuracy {currency.get("accuracy")}, worst doc {currency.get("worst_doc")}')
     print(f'\nRun {report["run_id"]} is now /results.')
     return 1 if problems else 0
 

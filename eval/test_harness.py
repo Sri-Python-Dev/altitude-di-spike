@@ -50,7 +50,8 @@ def test_number_and_currency_normalisation():
     assert fields['line_items[i].unit_price']['accuracy'] == 1 and fields['currency']['accuracy'] == 1
 
 BASELINE = Path(__file__).resolve().parent / 'baseline.json'
-QUOTES = Path(__file__).resolve().parents[1] / 'data/golden/quotes-v1'
+from eval.datasets import golden_dataset, path
+QUOTES = path(golden_dataset())
 
 @pytest.mark.eval
 def test_no_field_regresses_against_baseline(tmp_path):

@@ -43,7 +43,7 @@ ITEM_FIELDS = ['part_number_quoted', 'quantity', 'unit_price', 'extended_price',
 MONEY = {'unit_price', 'extended_price', 'stated_total'}
 MAX_UPLOAD = 25 * 1024 * 1024
 PAGE_SCALE = 1.5
-HARNESS_DATASETS = ['data/golden/quotes-v1', 'data/synthetic/edge-cases', 'data/synthetic']
+from eval.datasets import golden_dataset, harness_datasets  # set in .env: ALTITUDE_GOLDEN_DATASET
 HARNESS: dict = {}  # the one background harness run started from /results
 
 def _fmt(value, field: str | None = None) -> str:
@@ -401,7 +401,7 @@ def render_results(args: dict, notice: str = '') -> str:
     base = load_run(args.get('run'))
     if base is None:
         body = notice + _notice('No harness report yet. Start a run below, or run '
-                                '<span class="mono">uv run --env-file .env python -m eval.run --dataset data/golden/quotes-v1 --extractor current</span>.')
+                                f'<span class="mono">uv run --env-file .env python -m eval.run --dataset {escape(golden_dataset())} --extractor current</span>.')
         return _page('Results', body + _run_form(), active='/results', heading='Results')
     compare = load_run(args['compare']) if args.get('compare') else None
     report = load_run(shown_id) if shown_id and shown_id != base.get('run_id') else base
@@ -466,7 +466,7 @@ def _run_form() -> str:
             '<form method="post" action="/results/run" class="inline">'
             '<label>Model<select name="extractor"><option value="current">gpt-4.1-nano</option><option value="frontier">gpt-4.1</option></select></label>'
             '<button type="submit">Start run</button></form>'
-            f'<p class="note" style="margin-top:8px">Runs {", ".join(HARNESS_DATASETS)} with parsing cached and extraction in parallel; '
+            f'<p class="note" style="margin-top:8px">Runs {", ".join(harness_datasets())} with parsing cached and extraction in parallel; '
             'the page updates when it finishes.</p></div></section>')
 
 def start_harness(extractor: str) -> None:
@@ -475,7 +475,7 @@ def start_harness(extractor: str) -> None:
     from temporal_app.activities import STATE_DIR
     log = Path(STATE_DIR) / 'harness.log'
     log.parent.mkdir(parents=True, exist_ok=True)
-    cmd = [sys.executable, '-m', 'eval.run', *[x for d in HARNESS_DATASETS for x in ('--dataset', d)], '--extractor', extractor]
+    cmd = [sys.executable, '-m', 'eval.run', *[x for d in harness_datasets() for x in ('--dataset', d)], '--extractor', extractor]
     HARNESS.update(proc=subprocess.Popen(cmd, cwd=ROOT, stdout=log.open('w'), stderr=subprocess.STDOUT),
                    started=time.time(), extractor=extractor)
 

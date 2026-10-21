@@ -98,7 +98,7 @@ def validate(folder: Path, fix: bool = False):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('dataset', type=Path)
-    ap.add_argument('--expect', type=int, default=20, help='required document count (0 = any)')
+    ap.add_argument('--expect', type=int, default=0, help='required document count (default: any; task 01 uses 20)')
     ap.add_argument('--fix-bboxes', action='store_true', help="move misplaced golden bboxes onto the span's layout element")
     args = ap.parse_args()
     count, failures = validate(args.dataset, args.fix_bboxes)

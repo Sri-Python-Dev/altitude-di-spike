@@ -121,3 +121,47 @@ On its first start it only takes mail that arrives from then on (`--backfill` to
 already in the folder). It remembers what it fetched (`data\state\graph_mail.json`), so a restart
 neither misses nor repeats mail. It is read-only: nothing is marked, moved or deleted in the
 mailbox. Only counts are printed; no subjects or senders.
+
+## 7. Testing with your own golden dataset
+
+**One setting.** In `.env`:
+
+```
+ALTITUDE_GOLDEN_DATASET=data/golden/my-set     # your folder
+ALTITUDE_EXTRA_DATASETS=                       # empty: score your set alone (keep the default to include the edge cases)
+```
+
+The Results page's Run button, `tools.demo check`, the parser metrics and `pytest -m eval` all read it.
+
+**The folder.** One PDF per quote plus one golden JSON per PDF, same name (`q001.pdf` + `q001.json`),
+in the format of `data/golden/schema.json`: every field's correct `value`, its `page`, `bbox` and
+exact `verbatim_span`, and who labelled it. Field names as in `data/golden/quotes-v1/quote_004.json`
+(line items as `line_items[0].unit_price`, …). Only cleared or synthetic documents (CLAUDE.md).
+
+**Making the JSON files.** Either label each PDF with the labelling tool (it finds the exact text
+and box for you and refuses text it cannot find):
+
+```powershell
+uv run --env-file .env python tools/label.py data\golden\my-set\q001.pdf --labeller "Srini"
+```
+
+or, if the answers already exist in another form (a spreadsheet, another system), convert them to
+this JSON once and let the validator place the boxes:
+
+```powershell
+uv run tools/validate_golden.py data\golden\my-set --fix-bboxes
+```
+
+**Then, in order:**
+
+```powershell
+uv run tools/validate_golden.py data\golden\my-set                       # every span found, every box on the right text
+uv run python review_tool/review.py data\golden\my-set --reviewer "Srini" # a person signs off every answer
+uv run --env-file .env eval/run.py --dataset data/golden/my-set --extractor current --write-baseline
+```
+
+The last line is the first scored run; `--write-baseline` makes it the reference for
+`pytest -m eval` (fails if any field drops more than 2 points).
+
+**Also update for your suppliers:** the **Supplier currency on file** table (app → Rules), so
+"$"-only quotes resolve and currency mismatches are flagged for your suppliers.
