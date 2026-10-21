@@ -1,0 +1,434 @@
+{
+  "document_count": 31,
+  "fields": {
+    "currency": {
+      "label": "Currency",
+      "accuracy": 0.9677,
+      "grounded_rate": 0.9677,
+      "evidence_match_rate": 0.9677,
+      "ungrounded_rate": 0.0323,
+      "missing_rate": 0.0323,
+      "count": 31,
+      "ungrounded_count": 1,
+      "ungrounded_reasons": {
+        "ambiguous_symbol": 1
+      },
+      "worst_doc": "quote-g-dollar",
+      "worst_doc_accuracy": 0.0,
+      "worst_doc_field": "currency",
+      "previous_accuracy": 1.0,
+      "delta": -0.0323
+    },
+    "supplier_name": {
+      "label": "Supplier",
+      "accuracy": 0.9677,
+      "grounded_rate": 0.9677,
+      "evidence_match_rate": 0.9677,
+      "ungrounded_rate": 0.0323,
+      "missing_rate": 0.0323,
+      "count": 31,
+      "ungrounded_count": 1,
+      "ungrounded_reasons": {
+        "no_bbox": 1
+      },
+      "worst_doc": "quote_011",
+      "worst_doc_accuracy": 0.0,
+      "worst_doc_field": "supplier_name",
+      "previous_accuracy": 1.0,
+      "delta": -0.0323
+    },
+    "line_items[i].extended_price": {
+      "label": "Extended price",
+      "accuracy": 0.971,
+      "grounded_rate": 0.971,
+      "evidence_match_rate": 0.971,
+      "ungrounded_rate": 0.029,
+      "missing_rate": 0.029,
+      "count": 69,
+      "ungrounded_count": 2,
+      "ungrounded_reasons": {
+        "span_not_found": 2
+      },
+      "worst_doc": "scanned-quote",
+      "worst_doc_accuracy": 0.0,
+      "worst_doc_field": "line_items[0].extended_price",
+      "previous_accuracy": 1.0,
+      "delta": -0.029
+    },
+    "line_items[i].lead_time_days": {
+      "label": "Lead time (days)",
+      "accuracy": 0.971,
+      "grounded_rate": 0.971,
+      "evidence_match_rate": 0.971,
+      "ungrounded_rate": 0.029,
+      "missing_rate": 0.029,
+      "count": 69,
+      "ungrounded_count": 2,
+      "ungrounded_reasons": {
+        "span_not_found": 2
+      },
+      "worst_doc": "scanned-quote",
+      "worst_doc_accuracy": 0.0,
+      "worst_doc_field": "line_items[0].lead_time_days",
+      "previous_accuracy": 1.0,
+      "delta": -0.029
+    },
+    "line_items[i].moq": {
+      "label": "MOQ",
+      "accuracy": 0.971,
+      "grounded_rate": 0.971,
+      "evidence_match_rate": 0.971,
+      "ungrounded_rate": 0.029,
+      "missing_rate": 0.029,
+      "count": 69,
+      "ungrounded_count": 2,
+      "ungrounded_reasons": {
+        "span_not_found": 2
+      },
+      "worst_doc": "scanned-quote",
+      "worst_doc_accuracy": 0.0,
+      "worst_doc_field": "line_items[0].moq",
+      "previous_accuracy": 0.9565,
+      "delta": 0.0145
+    },
+    "line_items[i].quantity": {
+      "label": "Quantity",
+      "accuracy": 0.971,
+      "grounded_rate": 0.971,
+      "evidence_match_rate": 0.971,
+      "ungrounded_rate": 0.029,
+      "missing_rate": 0.029,
+      "count": 69,
+      "ungrounded_count": 2,
+      "ungrounded_reasons": {
+        "span_not_found": 2
+      },
+      "worst_doc": "scanned-quote",
+      "worst_doc_accuracy": 0.0,
+      "worst_doc_field": "line_items[0].quantity",
+      "previous_accuracy": 1.0,
+      "delta": -0.029
+    },
+    "line_items[i].unit_price": {
+      "label": "Unit price",
+      "accuracy": 0.971,
+      "grounded_rate": 0.971,
+      "evidence_match_rate": 0.971,
+      "ungrounded_rate": 0.029,
+      "missing_rate": 0.029,
+      "count": 69,
+      "ungrounded_count": 2,
+      "ungrounded_reasons": {
+        "span_not_found": 2
+      },
+      "worst_doc": "scanned-quote",
+      "worst_doc_accuracy": 0.0,
+      "worst_doc_field": "line_items[0].unit_price",
+      "previous_accuracy": 1.0,
+      "delta": -0.029
+    },
+    "incoterms": {
+      "label": "Incoterms",
+      "accuracy": 1.0,
+      "grounded_rate": 1.0,
+      "evidence_match_rate": 1.0,
+      "ungrounded_rate": 0.0,
+      "missing_rate": 0.0,
+      "count": 31,
+      "ungrounded_count": 0,
+      "ungrounded_reasons": {},
+      "worst_doc": null,
+      "worst_doc_accuracy": null,
+      "worst_doc_field": null,
+      "previous_accuracy": 1.0,
+      "delta": 0.0
+    },
+    "line_items[i].part_number_quoted": {
+      "label": "Part number",
+      "accuracy": 1.0,
+      "grounded_rate": 1.0,
+      "evidence_match_rate": 1.0,
+      "ungrounded_rate": 0.0,
+      "missing_rate": 0.0,
+      "count": 69,
+      "ungrounded_count": 0,
+      "ungrounded_reasons": {},
+      "worst_doc": null,
+      "worst_doc_accuracy": null,
+      "worst_doc_field": null,
+      "previous_accuracy": 1.0,
+      "delta": 0.0
+    },
+    "payment_terms": {
+      "label": "Payment terms",
+      "accuracy": 1.0,
+      "grounded_rate": 1.0,
+      "evidence_match_rate": 1.0,
+      "ungrounded_rate": 0.0,
+      "missing_rate": 0.0,
+      "count": 31,
+      "ungrounded_count": 0,
+      "ungrounded_reasons": {},
+      "worst_doc": null,
+      "worst_doc_accuracy": null,
+      "worst_doc_field": null,
+      "previous_accuracy": 1.0,
+      "delta": 0.0
+    },
+    "quote_date": {
+      "label": "Quote date",
+      "accuracy": 1.0,
+      "grounded_rate": 1.0,
+      "evidence_match_rate": 1.0,
+      "ungrounded_rate": 0.0,
+      "missing_rate": 0.0,
+      "count": 31,
+      "ungrounded_count": 0,
+      "ungrounded_reasons": {},
+      "worst_doc": null,
+      "worst_doc_accuracy": null,
+      "worst_doc_field": null,
+      "previous_accuracy": 1.0,
+      "delta": 0.0
+    },
+    "quote_reference": {
+      "label": "Quote reference",
+      "accuracy": 1.0,
+      "grounded_rate": 1.0,
+      "evidence_match_rate": 1.0,
+      "ungrounded_rate": 0.0,
+      "missing_rate": 0.0,
+      "count": 31,
+      "ungrounded_count": 0,
+      "ungrounded_reasons": {},
+      "worst_doc": null,
+      "worst_doc_accuracy": null,
+      "worst_doc_field": null,
+      "previous_accuracy": 1.0,
+      "delta": 0.0
+    },
+    "valid_until": {
+      "label": "Valid until",
+      "accuracy": 1.0,
+      "grounded_rate": 1.0,
+      "evidence_match_rate": 1.0,
+      "ungrounded_rate": 0.0,
+      "missing_rate": 0.0,
+      "count": 31,
+      "ungrounded_count": 0,
+      "ungrounded_reasons": {},
+      "worst_doc": null,
+      "worst_doc_accuracy": null,
+      "worst_doc_field": null,
+      "previous_accuracy": 1.0,
+      "delta": 0.0
+    }
+  },
+  "worst_fields": [
+    "currency",
+    "supplier_name",
+    "line_items[i].extended_price"
+  ],
+  "p50_latency_s": 3.726,
+  "p95_latency_s": 5.957,
+  "usage": {
+    "model": "gpt-4.1-nano",
+    "calls": 31,
+    "input_tokens": 27816,
+    "output_tokens": 21769,
+    "input_tokens_per_doc": 897,
+    "output_tokens_per_doc": 702,
+    "usd_per_100_docs": 0.0371
+  },
+  "run_id": "20261015T102806Z-current",
+  "previous_run_id": "20261015T102459Z-current",
+  "extractor": "current",
+  "model": "gpt-4.1-nano",
+  "parser": "docling 2.138.0",
+  "datasets": [
+    "data/golden/quotes-v1",
+    "data/synthetic/edge-cases",
+    "data/synthetic"
+  ],
+  "dataset_summary": [
+    {
+      "name": "quotes-v1",
+      "path": "data/golden/quotes-v1",
+      "documents": 20
+    },
+    {
+      "name": "edge-cases",
+      "path": "data/synthetic/edge-cases",
+      "documents": 10
+    },
+    {
+      "name": "synthetic",
+      "path": "data/synthetic",
+      "documents": 3
+    }
+  ],
+  "labellers": [
+    "synthetic-generator tools/make_synthetic.py (values known by construction)",
+    "synthetic-generator-v1 (not human-reviewed)"
+  ],
+  "git_commit": null,
+  "command": "uv run python -m eval.run --dataset data/golden/quotes-v1 --dataset data/synthetic/edge-cases --dataset data/synthetic --extractor current",
+  "edge_cases": [
+    {
+      "document_id": "corrupt",
+      "case": "truncated PDF",
+      "source": "corrupt.pdf",
+      "expected": "corrupt",
+      "got": "corrupt",
+      "pass": true
+    },
+    {
+      "document_id": "password-protected",
+      "case": "password-protected PDF",
+      "source": "password-protected.pdf",
+      "expected": "password_protected",
+      "got": "password_protected",
+      "pass": true
+    },
+    {
+      "document_id": "body-html",
+      "case": "quote in HTML email body",
+      "source": "body-html.eml",
+      "expected": "1 quote(s)",
+      "got": "1 quote(s)",
+      "pass": true,
+      "grounded_fields": 13,
+      "fields": 13
+    },
+    {
+      "document_id": "body-plain",
+      "case": "quote in plaintext email body",
+      "source": "body-plain.eml",
+      "expected": "1 quote(s)",
+      "got": "1 quote(s)",
+      "pass": true,
+      "grounded_fields": 19,
+      "fields": 19
+    },
+    {
+      "document_id": "scanned-quote",
+      "case": "scanned (no text layer)",
+      "source": "scanned-quote.pdf",
+      "expected": "1 quote(s)",
+      "got": "1 quote(s), ocr",
+      "pass": true,
+      "grounded_fields": 9,
+      "fields": 19
+    },
+    {
+      "document_id": "three-quotes-separate-pages-q1",
+      "case": "multi-quote, one per page",
+      "source": "three-quotes-separate-pages.pdf",
+      "expected": "3 quote(s)",
+      "got": "3 quote(s)",
+      "pass": true,
+      "grounded_fields": 19,
+      "fields": 19
+    },
+    {
+      "document_id": "three-quotes-separate-pages-q2",
+      "case": "multi-quote, one per page",
+      "source": "three-quotes-separate-pages.pdf",
+      "expected": "3 quote(s)",
+      "got": "3 quote(s)",
+      "pass": true,
+      "grounded_fields": 25,
+      "fields": 25
+    },
+    {
+      "document_id": "three-quotes-separate-pages-q3",
+      "case": "multi-quote, one per page",
+      "source": "three-quotes-separate-pages.pdf",
+      "expected": "3 quote(s)",
+      "got": "3 quote(s)",
+      "pass": true,
+      "grounded_fields": 13,
+      "fields": 13
+    },
+    {
+      "document_id": "two-quotes-same-page-q1",
+      "case": "multi-quote, same page",
+      "source": "two-quotes-same-page.pdf",
+      "expected": "2 quote(s)",
+      "got": "2 quote(s)",
+      "pass": true,
+      "grounded_fields": 13,
+      "fields": 13
+    },
+    {
+      "document_id": "two-quotes-same-page-q2",
+      "case": "multi-quote, same page",
+      "source": "two-quotes-same-page.pdf",
+      "expected": "2 quote(s)",
+      "got": "2 quote(s)",
+      "pass": true,
+      "grounded_fields": 19,
+      "fields": 19
+    },
+    {
+      "document_id": "quote-a",
+      "case": "single quote (dedupe demo)",
+      "source": "quote-a.pdf",
+      "expected": "1 quote(s)",
+      "got": "1 quote(s)",
+      "pass": true,
+      "grounded_fields": 19,
+      "fields": 19
+    },
+    {
+      "document_id": "quote-f",
+      "case": "single quote (dedupe demo)",
+      "source": "quote-f.pdf",
+      "expected": "1 quote(s)",
+      "got": "1 quote(s)",
+      "pass": true,
+      "grounded_fields": 13,
+      "fields": 13
+    },
+    {
+      "document_id": "quote-g-dollar",
+      "case": "single quote (dedupe demo)",
+      "source": "quote-g-dollar.pdf",
+      "expected": "1 quote(s)",
+      "got": "1 quote(s)",
+      "pass": true,
+      "grounded_fields": 18,
+      "fields": 19
+    }
+  ],
+  "edge_case_summary": [
+    {
+      "case": "Multi-quote PDF",
+      "what_happened": "three-quotes-separate-pages.pdf: 3 quote(s) (one per page); two-quotes-same-page.pdf: 2 quote(s) (same page)",
+      "pass": true
+    },
+    {
+      "case": "Body-only quote",
+      "what_happened": "HTML email body: 13/13 fields grounded; plaintext email body: 19/19 fields grounded",
+      "pass": true
+    },
+    {
+      "case": "Scanned PDF",
+      "what_happened": "No text layer, OCR used; 9/19 fields grounded",
+      "pass": true
+    },
+    {
+      "case": "Password-protected PDF",
+      "what_happened": "Rejected as password_protected, no retry",
+      "pass": true
+    },
+    {
+      "case": "Duplicate resend",
+      "what_happened": "Same PDF renamed in a new email: skipped (duplicate attachment). New PDF re-sent with the same Message-ID: processed.",
+      "pass": true
+    }
+  ],
+  "smoke_test": false,
+  "generated_at": "2026-10-15T10:28:06+00:00",
+  "duration_s": 17.7
+}

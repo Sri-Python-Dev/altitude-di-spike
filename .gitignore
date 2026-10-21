@@ -1,0 +1,24 @@
+# Secrets: never commit. Copy .env.example to .env on each machine.
+.env
+secrets/
+!secrets/.gitkeep
+
+# Python and tooling
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+
+# Local working data (document text, extractions, dedupe state): stays on each machine
+data/state/
+data/inbox/
+eval/cache/
+eval/reports/runs/
+rules/.history/
+runtime/
+out/
+
+# OS
+.DS_Store
+Thumbs.db

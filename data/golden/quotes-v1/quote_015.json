@@ -1,0 +1,454 @@
+{
+  "document_id": "quote_015",
+  "sha256": "1493a80cab42f04094b0c3e83b9714109f25ebf4c38098a71a9befacc3468a36",
+  "doc_type": "quote",
+  "fields": [
+    {
+      "name": "quote_reference",
+      "value": "QT-2026-0015",
+      "page": 1,
+      "bbox": [
+        86.03,
+        110.37,
+        144.55,
+        122.76
+      ],
+      "verbatim_span": "QT-2026-0015",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-10-21",
+      "page": 1,
+      "bbox": [
+        361.03,
+        110.37,
+        407.06,
+        122.76
+      ],
+      "verbatim_span": "2026-10-21",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-11-20",
+      "page": 1,
+      "bbox": [
+        85.51,
+        132.37,
+        131.54,
+        144.76
+      ],
+      "verbatim_span": "2026-11-20",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "GBP",
+      "page": 1,
+      "bbox": [
+        351.51,
+        132.37,
+        371.01,
+        144.76
+      ],
+      "verbatim_span": "GBP",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "FOB",
+      "page": 1,
+      "bbox": [
+        84.51,
+        154.37,
+        103.51,
+        166.76
+      ],
+      "verbatim_span": "FOB",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 30",
+      "page": 1,
+      "bbox": [
+        378.52,
+        154.37,
+        405.53,
+        166.76
+      ],
+      "verbatim_span": "Net 30",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "GSK-205",
+      "page": 1,
+      "bbox": [
+        40.0,
+        231.32,
+        77.02,
+        243.69
+      ],
+      "verbatim_span": "GSK-205",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 115,
+      "page": 1,
+      "bbox": [
+        166.0,
+        231.32,
+        181.01,
+        243.69
+      ],
+      "verbatim_span": "115",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 67.0,
+      "page": 1,
+      "bbox": [
+        223.0,
+        231.32,
+        245.52,
+        243.69
+      ],
+      "verbatim_span": "67.00",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 7705.0,
+      "page": 1,
+      "bbox": [
+        310.0,
+        231.32,
+        342.53,
+        243.69
+      ],
+      "verbatim_span": "7705.00",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 22,
+      "page": 1,
+      "bbox": [
+        409.0,
+        231.32,
+        419.01,
+        243.69
+      ],
+      "verbatim_span": "22",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[0].moq",
+      "value": 10,
+      "page": 1,
+      "bbox": [
+        497.0,
+        234.54,
+        507.01,
+        242.86
+      ],
+      "verbatim_span": "10",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "line_items[1].part_number_quoted",
+      "value": "PMP-140",
+      "page": 1,
+      "bbox": [
+        40.0,
+        256.33,
+        77.51,
+        268.69
+      ],
+      "verbatim_span": "PMP-140",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[1].quantity",
+      "value": 128,
+      "page": 1,
+      "bbox": [
+        166.0,
+        256.33,
+        181.01,
+        268.69
+      ],
+      "verbatim_span": "128",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[1].unit_price",
+      "value": 79.75,
+      "page": 1,
+      "bbox": [
+        223.0,
+        256.33,
+        245.52,
+        268.69
+      ],
+      "verbatim_span": "79.75",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[1].extended_price",
+      "value": 10208.0,
+      "page": 1,
+      "bbox": [
+        310.0,
+        256.33,
+        347.53,
+        268.69
+      ],
+      "verbatim_span": "10208.00",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[1].lead_time_days",
+      "value": 23,
+      "page": 1,
+      "bbox": [
+        409.0,
+        256.33,
+        419.01,
+        268.69
+      ],
+      "verbatim_span": "23",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[1].moq",
+      "value": 11,
+      "page": 1,
+      "bbox": [
+        497.0,
+        259.54,
+        507.01,
+        267.86
+      ],
+      "verbatim_span": "11",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "line_items[2].part_number_quoted",
+      "value": "CPL-778",
+      "page": 1,
+      "bbox": [
+        40.0,
+        281.33,
+        75.51,
+        293.69
+      ],
+      "verbatim_span": "CPL-778",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[2].quantity",
+      "value": 141,
+      "page": 1,
+      "bbox": [
+        166.0,
+        281.33,
+        181.01,
+        293.69
+      ],
+      "verbatim_span": "141",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[2].unit_price",
+      "value": 92.5,
+      "page": 1,
+      "bbox": [
+        223.0,
+        281.33,
+        245.52,
+        293.69
+      ],
+      "verbatim_span": "92.50",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[2].extended_price",
+      "value": 13042.5,
+      "page": 1,
+      "bbox": [
+        310.0,
+        281.33,
+        347.53,
+        293.69
+      ],
+      "verbatim_span": "13042.50",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[2].lead_time_days",
+      "value": 24,
+      "page": 1,
+      "bbox": [
+        409.0,
+        281.33,
+        419.01,
+        293.69
+      ],
+      "verbatim_span": "24",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[2].moq",
+      "value": 12,
+      "page": 1,
+      "bbox": [
+        497.0,
+        284.54,
+        507.01,
+        292.86
+      ],
+      "verbatim_span": "12",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "line_items[3].part_number_quoted",
+      "value": "MTR-420",
+      "page": 1,
+      "bbox": [
+        40.0,
+        306.33,
+        77.5,
+        318.69
+      ],
+      "verbatim_span": "MTR-420",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[3].quantity",
+      "value": 154,
+      "page": 1,
+      "bbox": [
+        166.0,
+        306.33,
+        181.01,
+        318.69
+      ],
+      "verbatim_span": "154",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[3].unit_price",
+      "value": 105.25,
+      "page": 1,
+      "bbox": [
+        223.0,
+        306.33,
+        250.52,
+        318.69
+      ],
+      "verbatim_span": "105.25",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[3].extended_price",
+      "value": 16208.5,
+      "page": 1,
+      "bbox": [
+        310.0,
+        306.33,
+        347.53,
+        318.69
+      ],
+      "verbatim_span": "16208.50",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    },
+    {
+      "name": "line_items[3].lead_time_days",
+      "value": 25,
+      "page": 1,
+      "bbox": [
+        409.0,
+        309.54,
+        419.01,
+        317.86
+      ],
+      "verbatim_span": "25",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "line_items[3].moq",
+      "value": 13,
+      "page": 1,
+      "bbox": [
+        497.0,
+        309.54,
+        507.01,
+        317.86
+      ],
+      "verbatim_span": "13",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "supplier_name",
+      "value": "Falcon Bearings",
+      "page": 1,
+      "bbox": [
+        38.0,
+        28.95,
+        154.7,
+        49.6
+      ],
+      "verbatim_span": "Falcon Bearings",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:15+00:00"
+    }
+  ],
+  "metadata": {
+    "label_source": "programmatically generated and text-position checked with PyMuPDF",
+    "human_reviewed": true,
+    "original_labeller": "synthetic-generator-v1 (not human-reviewed)",
+    "reviewed_by": "Srini",
+    "reviewed_at": "2026-10-15T11:05:15+00:00",
+    "review_changes": []
+  }
+}

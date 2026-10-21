@@ -1,0 +1,183 @@
+{
+  "document_id": "body-plain",
+  "sha256": "c699f93c9797dbf7fb1222d1c5137f4ad2728d40b85f763088922ed314a3b012",
+  "body_sha256": "e72b0675a7f10a1c92873efcc14c8e3cd4269bcb895b37fc827240008f8bfdf9",
+  "doc_type": "quote",
+  "source": "body-plain.eml",
+  "segment": 1,
+  "segment_count": 1,
+  "case": "quote in plaintext email body",
+  "fields": [
+    {
+      "name": "supplier_name",
+      "value": "Northwind Fasteners Ltd",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "Northwind Fasteners Ltd",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_reference",
+      "value": "NWF-Q-7781",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "NWF-Q-7781",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-10-08",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "2026-10-08",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-11-07",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "2026-11-07",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "EUR",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "EUR",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "DAP",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "DAP",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 30",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "Net 30",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "HX-210",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "HX-210",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 500,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "500",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 1.85,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "1.85",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 925.0,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "925.00",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 21,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "21",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].moq",
+      "value": 250,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "250",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].part_number_quoted",
+      "value": "HX-212",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "HX-212",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].quantity",
+      "value": 200,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "200",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].unit_price",
+      "value": 2.4,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "2.40",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].extended_price",
+      "value": 480.0,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "480.00",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].lead_time_days",
+      "value": 21,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "21",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].moq",
+      "value": 100,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "100",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    }
+  ]
+}

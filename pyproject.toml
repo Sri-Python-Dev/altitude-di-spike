@@ -1,0 +1,27 @@
+[project]
+name = "altitude-di-spike"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pydantic>=2,<3",
+    "pyyaml>=6",
+    "docling>=2",
+    "temporalio>=1",
+    "zen-engine>=0.20",
+    "openai>=1",
+    "azure-ai-documentintelligence>=1.0.0",
+    "onnxruntime>=1.31.0",
+    "psycopg[binary]>=3.2",
+]
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=1.4.0",
+    "reportlab>=4",
+]
+[tool.pytest.ini_options]
+testpaths = ["tests", "eval"]
+pythonpath = ["."]
+addopts = "-m 'not eval'"
+asyncio_mode = "auto"
+markers = ["eval: golden dataset regression checks"]

@@ -1,0 +1,129 @@
+{
+  "document_id": "body-html",
+  "sha256": "d81e7dd627bfed2820a1693ff8c06a55267d046de6ac643c6e4e2705dd1c78f0",
+  "body_sha256": "6557805b6bd0114847f4c995285294fdd34902b8fa8b21aad101339aa4ca26b7",
+  "doc_type": "quote",
+  "source": "body-html.eml",
+  "segment": 1,
+  "segment_count": 1,
+  "case": "quote in HTML email body",
+  "fields": [
+    {
+      "name": "supplier_name",
+      "value": "Saltmarsh Industrial Supply",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "Saltmarsh Industrial Supply",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_reference",
+      "value": "SIS-30914",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "SIS-30914",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-10-10",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "2026-10-10",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-11-09",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "2026-11-09",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "USD",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "USD",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "FOB",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "FOB",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 30",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "Net 30",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "SIS-GSK-7",
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "SIS-GSK-7",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 150,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "150",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 6.75,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "6.75",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 1012.5,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "1012.50",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 12,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "12",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].moq",
+      "value": 50,
+      "page": 0,
+      "bbox": null,
+      "verbatim_span": "50",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    }
+  ]
+}

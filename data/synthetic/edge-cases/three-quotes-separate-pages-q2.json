@@ -1,0 +1,362 @@
+{
+  "document_id": "three-quotes-separate-pages-q2",
+  "sha256": "58dc99b8f786d5c48c7ee2539743cefb8cee47f1fe45374c696eb15807b9381b",
+  "doc_type": "quote",
+  "source": "three-quotes-separate-pages.pdf",
+  "segment": 2,
+  "segment_count": 3,
+  "case": "multi-quote, one per page",
+  "ocr": false,
+  "fields": [
+    {
+      "name": "supplier_name",
+      "value": "Brightwater Fluid Systems",
+      "page": 2,
+      "bbox": [
+        78.0,
+        83.08,
+        305.05,
+        99.73
+      ],
+      "verbatim_span": "Brightwater Fluid Systems",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_reference",
+      "value": "BFS-2026-118",
+      "page": 2,
+      "bbox": [
+        84.0,
+        111.82,
+        200.17,
+        121.07
+      ],
+      "verbatim_span": "BFS-2026-118",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-10-05",
+      "page": 2,
+      "bbox": [
+        354.0,
+        111.82,
+        461.84,
+        121.07
+      ],
+      "verbatim_span": "2026-10-05",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-12-04",
+      "page": 2,
+      "bbox": [
+        84.0,
+        129.82,
+        185.71,
+        139.07
+      ],
+      "verbatim_span": "2026-12-04",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "EUR",
+      "page": 2,
+      "bbox": [
+        354.0,
+        129.82,
+        421.23,
+        139.07
+      ],
+      "verbatim_span": "EUR",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "DAP",
+      "page": 2,
+      "bbox": [
+        84.0,
+        147.82,
+        154.02,
+        157.07
+      ],
+      "verbatim_span": "DAP",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 45",
+      "page": 2,
+      "bbox": [
+        354.0,
+        147.82,
+        459.59,
+        157.07
+      ],
+      "verbatim_span": "Net 45",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "BW-VALVE-08",
+      "page": 2,
+      "bbox": [
+        84.0,
+        227.82,
+        150.13,
+        237.07
+      ],
+      "verbatim_span": "BW-VALVE-08",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 12,
+      "page": 2,
+      "bbox": [
+        162.13,
+        227.82,
+        173.25,
+        237.07
+      ],
+      "verbatim_span": "12",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 1475.5,
+      "page": 2,
+      "bbox": [
+        190.81,
+        227.82,
+        226.95,
+        237.07
+      ],
+      "verbatim_span": "1475.50",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 17706.0,
+      "page": 2,
+      "bbox": [
+        248.93,
+        227.82,
+        290.63,
+        237.07
+      ],
+      "verbatim_span": "17706.00",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 35,
+      "page": 2,
+      "bbox": [
+        305.95,
+        227.82,
+        317.07,
+        237.07
+      ],
+      "verbatim_span": "35",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].moq",
+      "value": 4,
+      "page": 2,
+      "bbox": [
+        366.86,
+        227.82,
+        372.42,
+        237.07
+      ],
+      "verbatim_span": "4",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].part_number_quoted",
+      "value": "BW-SEAL-2",
+      "page": 2,
+      "bbox": [
+        84.0,
+        245.82,
+        137.9,
+        255.07
+      ],
+      "verbatim_span": "BW-SEAL-2",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].quantity",
+      "value": 300,
+      "page": 2,
+      "bbox": [
+        162.13,
+        245.82,
+        178.81,
+        255.07
+      ],
+      "verbatim_span": "300",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].unit_price",
+      "value": 2.15,
+      "page": 2,
+      "bbox": [
+        190.81,
+        245.82,
+        210.27,
+        255.07
+      ],
+      "verbatim_span": "2.15",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].extended_price",
+      "value": 645.0,
+      "page": 2,
+      "bbox": [
+        248.93,
+        245.82,
+        279.51,
+        255.07
+      ],
+      "verbatim_span": "645.00",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].lead_time_days",
+      "value": 10,
+      "page": 2,
+      "bbox": [
+        305.95,
+        245.82,
+        317.07,
+        255.07
+      ],
+      "verbatim_span": "10",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[1].moq",
+      "value": 100,
+      "page": 2,
+      "bbox": [
+        366.86,
+        245.82,
+        383.54,
+        255.07
+      ],
+      "verbatim_span": "100",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[2].part_number_quoted",
+      "value": "BW-HOSE-90",
+      "page": 2,
+      "bbox": [
+        84.0,
+        263.82,
+        146.23,
+        273.07
+      ],
+      "verbatim_span": "BW-HOSE-90",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[2].quantity",
+      "value": 60,
+      "page": 2,
+      "bbox": [
+        162.13,
+        263.82,
+        173.25,
+        273.07
+      ],
+      "verbatim_span": "60",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[2].unit_price",
+      "value": 48.0,
+      "page": 2,
+      "bbox": [
+        190.81,
+        263.82,
+        215.83,
+        273.07
+      ],
+      "verbatim_span": "48.00",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[2].extended_price",
+      "value": 2880.0,
+      "page": 2,
+      "bbox": [
+        248.93,
+        263.82,
+        285.07,
+        273.07
+      ],
+      "verbatim_span": "2880.00",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[2].lead_time_days",
+      "value": 21,
+      "page": 2,
+      "bbox": [
+        305.95,
+        263.82,
+        317.07,
+        273.07
+      ],
+      "verbatim_span": "21",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[2].moq",
+      "value": 20,
+      "page": 2,
+      "bbox": [
+        366.86,
+        263.82,
+        377.98,
+        273.07
+      ],
+      "verbatim_span": "20",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    }
+  ]
+}

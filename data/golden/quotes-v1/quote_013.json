@@ -1,0 +1,284 @@
+{
+  "document_id": "quote_013",
+  "sha256": "b0487e3f628345953d8f393c6ba49b7661acd1c9a49413528a17f43c6a034f96",
+  "doc_type": "quote",
+  "fields": [
+    {
+      "name": "quote_reference",
+      "value": "QT-2026-0013",
+      "page": 1,
+      "bbox": [
+        86.03,
+        110.37,
+        144.55,
+        122.76
+      ],
+      "verbatim_span": "QT-2026-0013",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-10-15",
+      "page": 1,
+      "bbox": [
+        361.03,
+        110.37,
+        407.06,
+        122.76
+      ],
+      "verbatim_span": "2026-10-15",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-11-14",
+      "page": 1,
+      "bbox": [
+        85.51,
+        132.37,
+        131.54,
+        144.76
+      ],
+      "verbatim_span": "2026-11-14",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "USD",
+      "page": 1,
+      "bbox": [
+        351.51,
+        132.37,
+        370.51,
+        144.76
+      ],
+      "verbatim_span": "USD",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "DAP",
+      "page": 1,
+      "bbox": [
+        84.51,
+        154.37,
+        103.51,
+        166.76
+      ],
+      "verbatim_span": "DAP",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 45",
+      "page": 1,
+      "bbox": [
+        378.52,
+        154.37,
+        405.53,
+        166.76
+      ],
+      "verbatim_span": "Net 45",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "SEN-8820",
+      "page": 1,
+      "bbox": [
+        40.0,
+        231.32,
+        81.52,
+        243.69
+      ],
+      "verbatim_span": "SEN-8820",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 101,
+      "page": 1,
+      "bbox": [
+        166.0,
+        231.32,
+        181.01,
+        243.69
+      ],
+      "verbatim_span": "101",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 60.1,
+      "page": 1,
+      "bbox": [
+        223.0,
+        231.32,
+        245.52,
+        243.69
+      ],
+      "verbatim_span": "60.10",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 6070.1,
+      "page": 1,
+      "bbox": [
+        310.0,
+        231.32,
+        342.53,
+        243.69
+      ],
+      "verbatim_span": "6070.10",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 20,
+      "page": 1,
+      "bbox": [
+        409.0,
+        234.54,
+        419.01,
+        242.86
+      ],
+      "verbatim_span": "20",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "line_items[0].moq",
+      "value": 8,
+      "page": 1,
+      "bbox": [
+        497.0,
+        234.54,
+        502.0,
+        242.86
+      ],
+      "verbatim_span": "8",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "line_items[1].part_number_quoted",
+      "value": "ACT-300",
+      "page": 1,
+      "bbox": [
+        40.0,
+        256.33,
+        76.01,
+        268.69
+      ],
+      "verbatim_span": "ACT-300",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[1].quantity",
+      "value": 114,
+      "page": 1,
+      "bbox": [
+        166.0,
+        256.33,
+        181.01,
+        268.69
+      ],
+      "verbatim_span": "114",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[1].unit_price",
+      "value": 72.85,
+      "page": 1,
+      "bbox": [
+        223.0,
+        256.33,
+        245.52,
+        268.69
+      ],
+      "verbatim_span": "72.85",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[1].extended_price",
+      "value": 8304.9,
+      "page": 1,
+      "bbox": [
+        310.0,
+        256.33,
+        342.53,
+        268.69
+      ],
+      "verbatim_span": "8304.90",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[1].lead_time_days",
+      "value": 21,
+      "page": 1,
+      "bbox": [
+        409.0,
+        256.33,
+        419.01,
+        268.69
+      ],
+      "verbatim_span": "21",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    },
+    {
+      "name": "line_items[1].moq",
+      "value": 9,
+      "page": 1,
+      "bbox": [
+        497.0,
+        259.54,
+        502.0,
+        267.86
+      ],
+      "verbatim_span": "9",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "supplier_name",
+      "value": "Westbrook Automation",
+      "page": 1,
+      "bbox": [
+        38.0,
+        28.95,
+        203.0,
+        49.6
+      ],
+      "verbatim_span": "Westbrook Automation",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:03:56+00:00"
+    }
+  ],
+  "metadata": {
+    "label_source": "programmatically generated and text-position checked with PyMuPDF",
+    "human_reviewed": true,
+    "original_labeller": "synthetic-generator-v1 (not human-reviewed)",
+    "reviewed_by": "Srini",
+    "reviewed_at": "2026-10-15T11:03:56+00:00",
+    "review_changes": []
+  }
+}

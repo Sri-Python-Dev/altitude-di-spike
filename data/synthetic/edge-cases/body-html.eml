@@ -1,0 +1,29 @@
+From: sales@supplier.example
+To: rfq@altitude.example
+Subject: Quotation SIS-30914
+Date: Tue, 13 Oct 2026 00:00:00 +0000
+Message-ID: <body-html@supplier.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============4694241731690241017=="
+
+--===============4694241731690241017==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This message is HTML only.
+
+--===============4694241731690241017==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello,</p><p>Thanks for the RFQ. Please find our quotation bel=
+ow.</p><p>Supplier: Saltmarsh Industrial Supply</p><p>Quote Ref: SIS-30914</p=
+><p>Quote Date: 2026-10-10</p><p>Valid Until: 2026-11-09</p><p>Currency: USD<=
+/p><p>Incoterms: FOB</p><p>Payment Terms: Net 30</p><table><tr><th>Part</th><=
+th>Qty</th><th>Unit</th><th>Extended</th><th>Lead days</th><th>MOQ</th></tr><=
+tr><td>SIS-GSK-7</td><td>150</td><td>6.75</td><td>1012.50</td><td>12</td><td>=
+50</td></tr></table><p>Regards,<br>Sales desk</p></body></html>
+
+--===============4694241731690241017==--

@@ -1,0 +1,14 @@
+# Prices: OpenAI list prices, standard tier, checked 2026-10-13 at
+# https://developers.openai.com/api/docs/pricing — update when they change.
+# Used only to report cost per 100 documents in eval reports.
+tasks:
+  extract_quote:
+    backend: openai
+    model: gpt-4.1-nano  # listed as deprecated by OpenAI as of 2026-10-13
+    usd_per_1m_input: 0.10
+    usd_per_1m_output: 0.40
+  extract_quote_frontier:
+    backend: openai
+    model: gpt-4.1
+    usd_per_1m_input: 2.00
+    usd_per_1m_output: 8.00

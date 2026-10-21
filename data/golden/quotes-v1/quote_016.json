@@ -1,0 +1,199 @@
+{
+  "document_id": "quote_016",
+  "sha256": "4ed2cbb29f5c07f47c3dbe9d79b03d403b9b5d9257b1f119b2d7bceeac30be6b",
+  "doc_type": "quote",
+  "fields": [
+    {
+      "name": "quote_reference",
+      "value": "QT-2026-0016",
+      "page": 1,
+      "bbox": [
+        86.03,
+        110.37,
+        144.55,
+        122.76
+      ],
+      "verbatim_span": "QT-2026-0016",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-10-24",
+      "page": 1,
+      "bbox": [
+        361.03,
+        110.37,
+        407.06,
+        122.76
+      ],
+      "verbatim_span": "2026-10-24",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-11-23",
+      "page": 1,
+      "bbox": [
+        85.51,
+        132.37,
+        131.54,
+        144.76
+      ],
+      "verbatim_span": "2026-11-23",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "CAD",
+      "page": 1,
+      "bbox": [
+        351.51,
+        132.37,
+        371.0,
+        144.76
+      ],
+      "verbatim_span": "CAD",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "FCA",
+      "page": 1,
+      "bbox": [
+        84.51,
+        154.37,
+        103.01,
+        166.76
+      ],
+      "verbatim_span": "FCA",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 45",
+      "page": 1,
+      "bbox": [
+        378.52,
+        154.37,
+        405.53,
+        166.76
+      ],
+      "verbatim_span": "Net 45",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "PMP-140",
+      "page": 1,
+      "bbox": [
+        40.0,
+        231.32,
+        77.51,
+        243.69
+      ],
+      "verbatim_span": "PMP-140",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 122,
+      "page": 1,
+      "bbox": [
+        166.0,
+        231.32,
+        181.01,
+        243.69
+      ],
+      "verbatim_span": "122",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 70.45,
+      "page": 1,
+      "bbox": [
+        223.0,
+        231.32,
+        245.52,
+        243.69
+      ],
+      "verbatim_span": "70.45",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 8594.9,
+      "page": 1,
+      "bbox": [
+        310.0,
+        231.32,
+        342.53,
+        243.69
+      ],
+      "verbatim_span": "8594.90",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 23,
+      "page": 1,
+      "bbox": [
+        409.0,
+        234.54,
+        419.01,
+        242.86
+      ],
+      "verbatim_span": "23",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "line_items[0].moq",
+      "value": 11,
+      "page": 1,
+      "bbox": [
+        497.0,
+        234.54,
+        507.01,
+        242.86
+      ],
+      "verbatim_span": "11",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00",
+      "bbox_corrected": "2026-10-13 tools.validate_golden --fix-bboxes"
+    },
+    {
+      "name": "supplier_name",
+      "value": "Redwood Controls",
+      "page": 1,
+      "bbox": [
+        38.0,
+        28.95,
+        171.33,
+        49.6
+      ],
+      "verbatim_span": "Redwood Controls",
+      "labeller": "Srini",
+      "labelled_at": "2026-10-15T11:05:30+00:00"
+    }
+  ],
+  "metadata": {
+    "label_source": "programmatically generated and text-position checked with PyMuPDF",
+    "human_reviewed": true,
+    "original_labeller": "synthetic-generator-v1 (not human-reviewed)",
+    "reviewed_by": "Srini",
+    "reviewed_at": "2026-10-15T11:05:30+00:00",
+    "review_changes": []
+  }
+}

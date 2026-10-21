@@ -1,0 +1,194 @@
+{
+  "document_id": "quote-f",
+  "sha256": "dfd7b52eccb3cb28925b41f4e2500402d90ce9c370f77251c531c0dbb4fd166d",
+  "doc_type": "quote",
+  "source": "quote-f.pdf",
+  "segment": 1,
+  "segment_count": 1,
+  "case": "single quote (dedupe demo)",
+  "ocr": false,
+  "fields": [
+    {
+      "name": "supplier_name",
+      "value": "Saltmarsh Industrial Supply",
+      "page": 1,
+      "bbox": [
+        78.0,
+        83.08,
+        316.07,
+        99.73
+      ],
+      "verbatim_span": "Saltmarsh Industrial Supply",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_reference",
+      "value": "SIS-30914",
+      "page": 1,
+      "bbox": [
+        84.0,
+        111.82,
+        182.39,
+        121.07
+      ],
+      "verbatim_span": "SIS-30914",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-10-10",
+      "page": 1,
+      "bbox": [
+        354.0,
+        111.82,
+        461.84,
+        121.07
+      ],
+      "verbatim_span": "2026-10-10",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-11-09",
+      "page": 1,
+      "bbox": [
+        84.0,
+        129.82,
+        185.71,
+        139.07
+      ],
+      "verbatim_span": "2026-11-09",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "USD",
+      "page": 1,
+      "bbox": [
+        354.0,
+        129.82,
+        421.23,
+        139.07
+      ],
+      "verbatim_span": "USD",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "FOB",
+      "page": 1,
+      "bbox": [
+        84.0,
+        147.82,
+        154.02,
+        157.07
+      ],
+      "verbatim_span": "FOB",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 30",
+      "page": 1,
+      "bbox": [
+        354.0,
+        147.82,
+        459.59,
+        157.07
+      ],
+      "verbatim_span": "Net 30",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "SIS-GSK-7",
+      "page": 1,
+      "bbox": [
+        84.0,
+        227.82,
+        133.46,
+        237.07
+      ],
+      "verbatim_span": "SIS-GSK-7",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 150,
+      "page": 1,
+      "bbox": [
+        154.9,
+        227.82,
+        171.58,
+        237.07
+      ],
+      "verbatim_span": "150",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 6.75,
+      "page": 1,
+      "bbox": [
+        183.58,
+        227.82,
+        203.04,
+        237.07
+      ],
+      "verbatim_span": "6.75",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 1012.5,
+      "page": 1,
+      "bbox": [
+        241.7,
+        227.82,
+        277.84,
+        237.07
+      ],
+      "verbatim_span": "1012.50",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 12,
+      "page": 1,
+      "bbox": [
+        298.72,
+        227.82,
+        309.84,
+        237.07
+      ],
+      "verbatim_span": "12",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "name": "line_items[0].moq",
+      "value": 50,
+      "page": 1,
+      "bbox": [
+        359.63,
+        227.82,
+        370.75,
+        237.07
+      ],
+      "verbatim_span": "50",
+      "labeller": "synthetic-generator tools/make_synthetic.py (values known by construction)",
+      "labelled_at": "2026-10-13T00:00:00+00:00"
+    }
+  ]
+}

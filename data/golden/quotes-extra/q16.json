@@ -1,0 +1,390 @@
+{
+  "document_id": "q16",
+  "sha256": "92f0ec252ea0051fab3f78b8b457c73a8adb26a61c944e105efc99ef0f022125",
+  "doc_type": "quote",
+  "metadata": {
+    "label_source": "Drafted by Claude from the PDF for srini; values read from the page, not from any extraction",
+    "human_reviewed": false,
+    "judgement_calls": "lead_time_days: weeks converted to days (2 weeks = 14, 3 weeks = 21, 6 wks = 42); \"Ex stock\" = 0 days. incoterms recorded with its named place (DAP Dayton). No MOQ stated."
+  },
+  "fields": [
+    {
+      "name": "supplier_name",
+      "value": "Proseware Motion LLC",
+      "page": 1,
+      "bbox": [
+        50.0,
+        35.51,
+        223.36,
+        50.31
+      ],
+      "verbatim_span": "Proseware Motion LLC",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "quote_reference",
+      "value": "Q-2026-0775",
+      "page": 1,
+      "bbox": [
+        400.0,
+        60.54,
+        499.05,
+        68.86
+      ],
+      "verbatim_span": "Q-2026-0775",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "quote_date",
+      "value": "2026-09-24",
+      "page": 1,
+      "bbox": [
+        400.0,
+        73.54,
+        470.04,
+        81.86
+      ],
+      "verbatim_span": "2026-09-24",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "valid_until",
+      "value": "2026-12-23",
+      "page": 1,
+      "bbox": [
+        400.0,
+        86.54,
+        490.05,
+        94.86
+      ],
+      "verbatim_span": "2026-12-23",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "currency",
+      "value": "GBP",
+      "page": 1,
+      "bbox": [
+        50.0,
+        130.54,
+        198.55,
+        138.86
+      ],
+      "verbatim_span": "All prices are in GBP, excluding VAT.",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "incoterms",
+      "value": "DAP Dayton",
+      "page": 1,
+      "bbox": [
+        50.0,
+        143.54,
+        232.55,
+        151.86
+      ],
+      "verbatim_span": "DAP Dayton",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "payment_terms",
+      "value": "Net 45",
+      "page": 1,
+      "bbox": [
+        50.0,
+        156.54,
+        117.03,
+        164.86
+      ],
+      "verbatim_span": "Net 45",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[0].part_number_quoted",
+      "value": "VLV-65",
+      "page": 1,
+      "bbox": [
+        54.0,
+        213.9,
+        82.35,
+        221.76
+      ],
+      "verbatim_span": "VLV-65",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[0].quantity",
+      "value": 250,
+      "page": 1,
+      "bbox": [
+        304.0,
+        213.9,
+        318.18,
+        221.76
+      ],
+      "verbatim_span": "250",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[0].unit_price",
+      "value": 0.0425,
+      "page": 1,
+      "bbox": [
+        354.0,
+        213.9,
+        379.99,
+        221.76
+      ],
+      "verbatim_span": "0.0425",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[0].extended_price",
+      "value": 10.63,
+      "page": 1,
+      "bbox": [
+        434.0,
+        213.9,
+        455.27,
+        221.76
+      ],
+      "verbatim_span": "10.63",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[0].lead_time_days",
+      "value": 14,
+      "page": 1,
+      "bbox": [
+        519.0,
+        213.9,
+        550.18,
+        221.76
+      ],
+      "verbatim_span": "2 weeks",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[1].part_number_quoted",
+      "value": "GB-920",
+      "page": 1,
+      "bbox": [
+        54.0,
+        233.9,
+        83.29,
+        241.76
+      ],
+      "verbatim_span": "GB-920",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[1].quantity",
+      "value": 1000,
+      "page": 1,
+      "bbox": [
+        304.0,
+        233.9,
+        325.27,
+        241.76
+      ],
+      "verbatim_span": "1,000",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[1].unit_price",
+      "value": 480.0,
+      "page": 1,
+      "bbox": [
+        354.0,
+        233.9,
+        379.99,
+        241.76
+      ],
+      "verbatim_span": "480.00",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[1].extended_price",
+      "value": 480000.0,
+      "page": 1,
+      "bbox": [
+        434.0,
+        233.9,
+        476.53,
+        241.76
+      ],
+      "verbatim_span": "480,000.00",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[1].lead_time_days",
+      "value": 0,
+      "page": 1,
+      "bbox": [
+        519.0,
+        233.9,
+        551.12,
+        241.76
+      ],
+      "verbatim_span": "Ex stock",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[2].part_number_quoted",
+      "value": "GB-420",
+      "page": 1,
+      "bbox": [
+        54.0,
+        253.9,
+        83.29,
+        261.76
+      ],
+      "verbatim_span": "GB-420",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[2].quantity",
+      "value": 2,
+      "page": 1,
+      "bbox": [
+        304.0,
+        253.9,
+        308.73,
+        261.76
+      ],
+      "verbatim_span": "2",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[2].unit_price",
+      "value": 22.75,
+      "page": 1,
+      "bbox": [
+        354.0,
+        253.9,
+        375.27,
+        261.76
+      ],
+      "verbatim_span": "22.75",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[2].extended_price",
+      "value": 45.5,
+      "page": 1,
+      "bbox": [
+        434.0,
+        253.9,
+        455.27,
+        261.76
+      ],
+      "verbatim_span": "45.50",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[2].lead_time_days",
+      "value": 21,
+      "page": 1,
+      "bbox": [
+        519.0,
+        253.9,
+        550.18,
+        261.76
+      ],
+      "verbatim_span": "3 weeks",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[3].part_number_quoted",
+      "value": "GB-720",
+      "page": 1,
+      "bbox": [
+        54.0,
+        273.9,
+        83.29,
+        281.76
+      ],
+      "verbatim_span": "GB-720",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[3].quantity",
+      "value": 10,
+      "page": 1,
+      "bbox": [
+        304.0,
+        273.9,
+        313.45,
+        281.76
+      ],
+      "verbatim_span": "10",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[3].unit_price",
+      "value": 48.0,
+      "page": 1,
+      "bbox": [
+        354.0,
+        273.9,
+        375.27,
+        281.76
+      ],
+      "verbatim_span": "48.00",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[3].extended_price",
+      "value": 480.0,
+      "page": 1,
+      "bbox": [
+        434.0,
+        273.9,
+        459.99,
+        281.76
+      ],
+      "verbatim_span": "480.00",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    },
+    {
+      "name": "line_items[3].lead_time_days",
+      "value": 42,
+      "page": 1,
+      "bbox": [
+        519.0,
+        273.9,
+        540.73,
+        281.76
+      ],
+      "verbatim_span": "6 wks",
+      "labeller": "srini",
+      "labelled_at": "2026-10-14T20:07:26.798151+00:00"
+    }
+  ]
+}

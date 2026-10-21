@@ -1,0 +1,348 @@
+{
+  "contentType": "application/vnd.gorules.decision",
+  "nodes": [
+    {
+      "id": "input",
+      "type": "inputNode",
+      "name": "Quote",
+      "position": {
+        "x": 80,
+        "y": 200
+      }
+    },
+    {
+      "id": "supplier_currency",
+      "type": "decisionTableNode",
+      "name": "Supplier currency on file",
+      "position": {
+        "x": 380,
+        "y": 200
+      },
+      "content": {
+        "hitPolicy": "first",
+        "passThrough": true,
+        "inputField": null,
+        "outputPath": null,
+        "executionMode": "single",
+        "inputs": [
+          {
+            "id": "s",
+            "name": "Supplier (lower case, without Inc/LLC/Ltd/GmbH)",
+            "field": "supplier"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c",
+            "name": "Currency on file",
+            "field": "supplier_default_currency"
+          }
+        ],
+        "rules": [
+          {
+            "_id": "s1",
+            "s": "\"apex precision manufacturing\"",
+            "c": "\"EUR\""
+          },
+          {
+            "_id": "s2",
+            "s": "\"atlas mechanical works\"",
+            "c": "\"GBP\""
+          },
+          {
+            "_id": "s3",
+            "s": "\"beacon materials group\"",
+            "c": "\"CAD\""
+          },
+          {
+            "_id": "s4",
+            "s": "\"blue ridge fasteners\"",
+            "c": "\"GBP\""
+          },
+          {
+            "_id": "s5",
+            "s": "\"brightwater fluid systems\"",
+            "c": "\"EUR\""
+          },
+          {
+            "_id": "s6",
+            "s": "\"cedar valley components\"",
+            "c": "\"GBP\""
+          },
+          {
+            "_id": "s7",
+            "s": "\"coastal precision parts\"",
+            "c": "\"EUR\""
+          },
+          {
+            "_id": "s8",
+            "s": "\"delta forge industries\"",
+            "c": "\"EUR\""
+          },
+          {
+            "_id": "s9",
+            "s": "\"everest components\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "s10",
+            "s": "\"falcon bearings\"",
+            "c": "\"GBP\""
+          },
+          {
+            "_id": "s11",
+            "s": "\"granite equipment supply\"",
+            "c": "\"GBP\""
+          },
+          {
+            "_id": "s12",
+            "s": "\"halcyon precision parts\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "s13",
+            "s": "\"harborline metals\"",
+            "c": "\"EUR\""
+          },
+          {
+            "_id": "s14",
+            "s": "\"kestrel avionics\"",
+            "c": "\"GBP\""
+          },
+          {
+            "_id": "s15",
+            "s": "\"meridian aerospace supply\"",
+            "c": "\"CAD\""
+          },
+          {
+            "_id": "s16",
+            "s": "\"northstar industrial components\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "s17",
+            "s": "\"northwind fasteners\"",
+            "c": "\"EUR\""
+          },
+          {
+            "_id": "s18",
+            "s": "\"nova industrial trading\"",
+            "c": "\"CAD\""
+          },
+          {
+            "_id": "s19",
+            "s": "\"orchard lane components\"",
+            "c": "\"CAD\""
+          },
+          {
+            "_id": "s20",
+            "s": "\"orion motion systems\"",
+            "c": "\"CAD\""
+          },
+          {
+            "_id": "s21",
+            "s": "\"pioneer fluid controls\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "s22",
+            "s": "\"proseware motion\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "s23",
+            "s": "\"redwood controls\"",
+            "c": "\"CAD\""
+          },
+          {
+            "_id": "s24",
+            "s": "\"saltmarsh industrial supply\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "s25",
+            "s": "\"silverline industrial\"",
+            "c": "\"EUR\""
+          },
+          {
+            "_id": "s26",
+            "s": "\"summit electrical parts\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "s27",
+            "s": "\"westbrook automation\"",
+            "c": "\"USD\""
+          },
+          {
+            "_id": "unknown",
+            "s": "",
+            "c": "null"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quote_flags",
+      "type": "decisionTableNode",
+      "name": "Quote flags",
+      "position": {
+        "x": 720,
+        "y": 200
+      },
+      "content": {
+        "hitPolicy": "collect",
+        "passThrough": true,
+        "inputField": null,
+        "outputPath": "flags",
+        "executionMode": "single",
+        "inputs": [
+          {
+            "id": "q",
+            "name": "Quote currency",
+            "field": "quote_currency"
+          },
+          {
+            "id": "d",
+            "name": "Supplier currency on file",
+            "field": "supplier_default_currency"
+          },
+          {
+            "id": "p",
+            "name": "PO currency",
+            "field": "po_currency"
+          },
+          {
+            "id": "st",
+            "name": "Stated total",
+            "field": "stated_total"
+          },
+          {
+            "id": "ls",
+            "name": "Sum of line amounts",
+            "field": "line_total_sum"
+          },
+          {
+            "id": "cc",
+            "name": "Currencies seen",
+            "field": "currencies_seen_count"
+          },
+          {
+            "id": "pv",
+            "name": "Price vs last quote (%)",
+            "field": "price_vs_last_quote_pct"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "fc",
+            "name": "Flag",
+            "field": "flag_code"
+          },
+          {
+            "id": "sv",
+            "name": "Severity",
+            "field": "severity"
+          },
+          {
+            "id": "fl",
+            "name": "Field",
+            "field": "field"
+          },
+          {
+            "id": "ms",
+            "name": "Message",
+            "field": "message"
+          }
+        ],
+        "rules": [
+          {
+            "_id": "mismatch_supplier",
+            "q": "!= null",
+            "d": "!= null and $ != quote_currency",
+            "p": "",
+            "fc": "\"CURRENCY_MISMATCH\"",
+            "sv": "\"review\"",
+            "fl": "\"currency\"",
+            "ms": "\"Quote currency differs from the supplier's currency on file\"",
+            "st": "",
+            "ls": "",
+            "cc": "",
+            "pv": ""
+          },
+          {
+            "_id": "mismatch_po",
+            "q": "!= null",
+            "d": "",
+            "p": "!= null and $ != quote_currency",
+            "fc": "\"CURRENCY_MISMATCH\"",
+            "sv": "\"review\"",
+            "fl": "\"currency\"",
+            "ms": "\"Quote currency differs from the PO currency\"",
+            "st": "",
+            "ls": "",
+            "cc": "",
+            "pv": ""
+          },
+          {
+            "_id": "unresolved",
+            "q": "== null",
+            "d": "",
+            "p": "",
+            "fc": "\"CURRENCY_UNRESOLVED\"",
+            "sv": "\"review\"",
+            "fl": "\"currency\"",
+            "ms": "\"Quote currency could not be resolved from the document\"",
+            "st": "",
+            "ls": "",
+            "cc": "",
+            "pv": ""
+          },
+          {
+            "_id": "total_mismatch",
+            "q": "",
+            "d": "",
+            "p": "",
+            "st": "!= null",
+            "ls": "!= null and abs(stated_total - $) > abs(stated_total) * 0.01",
+            "cc": "",
+            "pv": "",
+            "fc": "\"TOTAL_MISMATCH\"",
+            "sv": "\"review\"",
+            "fl": "\"stated_total\"",
+            "ms": "\"Stated total differs from the sum of the line items by more than 1%\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "output",
+      "type": "outputNode",
+      "name": "Result",
+      "position": {
+        "x": 1060,
+        "y": 200
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "sourceId": "input",
+      "targetId": "supplier_currency",
+      "type": "edge"
+    },
+    {
+      "id": "e2",
+      "sourceId": "supplier_currency",
+      "targetId": "quote_flags",
+      "type": "edge"
+    },
+    {
+      "id": "e3",
+      "sourceId": "quote_flags",
+      "targetId": "output",
+      "type": "edge"
+    }
+  ]
+}

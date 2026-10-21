@@ -1,0 +1,10 @@
+{
+  "document_id": "corrupt",
+  "sha256": "b86b61bb08089787bdc0f5c45a5131490f2b814a8216becd0401daae91c82ae5",
+  "doc_type": "quote",
+  "source": "corrupt.pdf",
+  "case": "truncated PDF",
+  "expect": "unparseable",
+  "reason": "corrupt",
+  "fields": []
+}

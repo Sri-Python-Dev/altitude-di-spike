@@ -1,0 +1,9 @@
+# Same bytes on Windows and macOS: golden files record SHA-256 hashes of these documents.
+* text=auto eol=lf
+*.pdf binary
+*.eml binary
+*.png binary
+*.sqlite binary
+*.ps1 text eol=crlf
+ui/static/*.js -diff
+ui/static/*.css -diff

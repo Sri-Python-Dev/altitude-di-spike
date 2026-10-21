@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "document_id",
+    "sha256",
+    "doc_type",
+    "fields"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "doc_type": {
+      "enum": [
+        "quote",
+        "po",
+        "invoice",
+        "other"
+      ]
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "value",
+          "page",
+          "bbox",
+          "verbatim_span",
+          "labeller",
+          "labelled_at"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {},
+          "page": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "bbox": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4,
+            "description": "x0, y0, x1, y1 in PDF points, top-left origin; null only for email bodies (page 0)"
+          },
+          "verbatim_span": {
+            "type": "string",
+            "minLength": 1
+          },
+          "labeller": {
+            "type": "string"
+          },
+          "labelled_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "bbox_corrected": {
+            "type": "string",
+            "description": "Set when tools.validate_golden --fix-bboxes moved the bbox"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "File in the same folder to parse (.pdf or .eml); default <document_id>.pdf"
+    },
+    "segment": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "1-based quote index when the source holds several quotes"
+    },
+    "segment_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "case": {
+      "type": "string",
+      "description": "Edge case this document covers"
+    },
+    "ocr": {
+      "type": "boolean"
+    },
+    "body_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 of the parsed email body text"
+    },
+    "expect": {
+      "enum": [
+        "unparseable"
+      ]
+    },
+    "reason": {
+      "enum": [
+        "password_protected",
+        "corrupt"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Free-form provenance, e.g. label_source, human_reviewed"
+    }
+  }
+}
