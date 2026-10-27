@@ -39,7 +39,7 @@ Gmail connection is made before the demo, change it back.*
 
 ## Step 1 — Results (≈ 3 min)
 
-1. Open **Results**. Choose *gpt-4.1-nano*, **Start run**.
+1. Open **Results**. Choose *gpt-5.4-mini* (the default), **Start run**.
 2. While it runs (rehearsal: **18.3 s** to the updated page), narrate the architecture: email →
    Temporal workflow → Docling parse (cached by SHA-256) → extraction → **grounding** (every value
    must be found on the page, with its location) → GoRules decision table → Postgres. The harness

@@ -63,6 +63,12 @@ def score_pill(p: float | None) -> str:
         return '<span class="score none" title="No known answers for this document">not scored</span>'
     return f'<span class="score {band(p)}">{_pct(p)}</span>'
 
+def _model_name(extractor: str) -> str:
+    """The model an extractor uses, from llm/config.yaml (so the app never shows a stale name)."""
+    from extract.extractors import MODEL_TASKS
+    from llm.router import model_prices
+    return model_prices(MODEL_TASKS[extractor])[0]
+
 def _label(name: str) -> str:
     m = ITEM.fullmatch(name)
     return FIELD_LABELS.get(m.group(2) if m else name, name)
@@ -464,7 +470,7 @@ def render_results(args: dict, notice: str = '') -> str:
 def _run_form() -> str:
     return ('<section class="panel"><header><h2>Run the harness</h2></header><div class="body">'
             '<form method="post" action="/results/run" class="inline">'
-            '<label>Model<select name="extractor"><option value="current">gpt-4.1-nano</option><option value="frontier">gpt-4.1</option></select></label>'
+            f'<label>Model<select name="extractor"><option value="current">{escape(_model_name("current"))}</option><option value="frontier">{escape(_model_name("frontier"))}</option></select></label>'
             '<button type="submit">Start run</button></form>'
             f'<p class="note" style="margin-top:8px">Runs {", ".join(harness_datasets())} with parsing cached and extraction in parallel; '
             'the page updates when it finishes.</p></div></section>')
@@ -723,8 +729,8 @@ def save_rules(body: bytes) -> dict:
 def render_upload(notice: str = '') -> str:
     form = ('<form method="post" action="/upload" enctype="multipart/form-data" class="formgrid">'
             '<label>Quote PDF<input type="file" id="file" name="file" accept="application/pdf,.pdf" required></label>'
-            '<label>Model<select id="extractor" name="extractor"><option value="current">gpt-4.1-nano</option>'
-            '<option value="frontier">gpt-4.1</option></select></label>'
+            f'<label>Model<select id="extractor" name="extractor"><option value="current">{escape(_model_name("current"))}</option>'
+            f'<option value="frontier">{escape(_model_name("frontier"))}</option></select></label>'
             '<div><button type="submit">Upload and process</button></div></form>')
     body = (notice + f'<section class="panel"><header><h2>Upload a quote</h2></header><div class="body">{form}'
             '<p class="note" style="margin-top:10px">The PDF goes through the same Temporal workflow as emailed quotes. '

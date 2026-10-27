@@ -9,4 +9,6 @@ Table rows are shown with cells separated by " | ".
 Do not claim fields are grounded: only the local grounding verifier may set that.
 stated_total is the quote's total amount as printed (the grand total, or the only total).
 Use page 0 for an email body. Every line item must include a part number if present.
-raw_confidence is only an untrusted model self-report, not a business decision.'''
+For every populated field also set raw_confidence: your probability, from 0.0 to 1.0, that the value
+is correct (e.g. 0.98 when it is printed plainly, lower when you inferred or converted it). Leave it
+null for absent fields. It is recorded for analysis only; it never decides anything.'''

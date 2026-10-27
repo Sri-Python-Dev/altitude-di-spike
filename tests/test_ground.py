@@ -179,3 +179,18 @@ def test_a_value_not_in_the_quoted_region_is_still_rejected():
     d = _page_doc()
     q = SupplierQuote(supplier_name=Evidenced(value='Globex Corp', page=1, verbatim_span=d.pages[0].text))
     assert ground(q, d, supplier_currency=None).supplier_name.ungrounded_reason in ('value_not_in_span', 'no_bbox')
+
+def test_a_value_carrying_its_own_label_is_cleaned_before_grounding():
+    from extract.ground import strip_field_label
+    assert strip_field_label('incoterms', 'Incoterms: FCA') == 'FCA'
+    assert strip_field_label('quote_reference', 'Quote Ref: KA-77031') == 'KA-77031'
+    assert strip_field_label('payment_terms', 'Payment Terms: Net 60') == 'Net 60'
+    assert strip_field_label('quote_date', 'Quote Date: 2026-10-07') == '2026-10-07'
+    # Not its own label, or no separator: unchanged.
+    assert strip_field_label('supplier_name', 'Quote Solutions Ltd') == 'Quote Solutions Ltd'
+    assert strip_field_label('incoterms', 'DAP Dayton (Incoterms 2020)') == 'DAP Dayton (Incoterms 2020)'
+    assert strip_field_label('payment_terms', 'Net 30: due on receipt') == 'Net 30: due on receipt'
+    assert strip_field_label('quantity', 25.0) == 25.0
+    d = doc('Incoterms: FCA')
+    f = ground(SupplierQuote(incoterms=Evidenced(value='Incoterms: FCA', page=1, verbatim_span='Incoterms: FCA')), d, supplier_currency=None).incoterms
+    assert f.grounded and f.value == 'FCA'

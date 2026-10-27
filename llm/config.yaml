@@ -1,12 +1,14 @@
-# Prices: OpenAI list prices, standard tier, checked 2026-10-13 at
-# https://developers.openai.com/api/docs/pricing — update when they change.
-# Used only to report cost per 100 documents in eval reports.
+# Prices: OpenAI list prices, standard tier (developers.openai.com/api/docs/pricing),
+# gpt-5.4-mini checked 2026-10-27, gpt-4.1 checked 2026-10-13. Used only for cost per 100 documents.
+# 2026-10-27: gpt-4.1-nano was switched off by OpenAI (HTTP 404). Replacement chosen on the harness:
+# gpt-5.4-mini, gpt-5.4-nano and gpt-4.1-mini all scored 630/631 with 0 wrong values stored;
+# gpt-5.4-mini was fastest (p50 4.5 s) and is not flagged deprecated.
 tasks:
   extract_quote:
     backend: openai
-    model: gpt-4.1-nano  # listed as deprecated by OpenAI as of 2026-10-13
-    usd_per_1m_input: 0.10
-    usd_per_1m_output: 0.40
+    model: gpt-5.4-mini
+    usd_per_1m_input: 0.75
+    usd_per_1m_output: 4.50
   extract_quote_frontier:
     backend: openai
     model: gpt-4.1

@@ -21,6 +21,26 @@ FIELD_LABELS = {
     'lead_time_days': ('lead',), 'moq': ('moq', 'minimum'), 'stated_total': ('total',),
 }
 
+# Words that may label a field's value on the page. A value that starts with its own field's label
+# ("Incoterms: FCA") is the label plus the value; the label is removed before grounding.
+VALUE_LABELS = {**FIELD_LABELS, 'supplier_name': ('supplier', 'vendor'), 'quote_reference': ('quote', 'quotation', 'ref'),
+                'quote_date': ('quote date', 'date'), 'part_number_quoted': ('part', 'item', 'p/n', 'sku'),
+                'payment_terms': ('payment', 'terms')}
+_LABELLED = re.compile(r'^\s*(?P<label>[A-Za-z][A-Za-z .#/()-]{0,40}?)\s*[:#]\s*(?P<rest>\S.*)$', re.S)
+
+def strip_field_label(field_name: str, value):
+    """'Incoterms: FCA' -> 'FCA' for the incoterms field. Only when the prefix is this field's own label
+    and is followed by ':' or '#'; anything else is returned unchanged."""
+    if not isinstance(value, str):
+        return value
+    m = _LABELLED.match(value)
+    if not m:
+        return value
+    label = m.group('label').casefold()
+    if any(word in label for word in VALUE_LABELS.get(field_name, ())):
+        return m.group('rest').strip()
+    return value
+
 def _norm(s: str) -> str:
     return ' '.join(s.split())
 
@@ -204,6 +224,7 @@ def ground_field(field_name: str, field: Evidenced, doc: ParsedDocument,
         # Nothing claimed: absent, not ungrounded.
         field.ungrounded_span = field.verbatim_span
         return None
+    field.value = strip_field_label(field_name, field.value)
     span = field.verbatim_span
     if not span or not span.strip():
         _fail(field, 'no_span')

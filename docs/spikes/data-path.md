@@ -31,7 +31,7 @@ synthetic or in `data/golden/` (cleared).** No real mailbox is read.
 
 | Sent | To | When |
 |---|---|---|
-| Parsed text of one quote (one segment of a document) + the extraction instruction | **Public OpenAI API**: `gpt-4.1-nano` (default) or `gpt-4.1` (frontier), via `llm/router.py` only | Every extraction (workflow, harness, `tools.where` on a PDF) |
+| Parsed text of one quote (one segment of a document) + the extraction instruction | **Public OpenAI API**: `gpt-5.4-mini` (default) or `gpt-4.1` (frontier), via `llm/router.py` only | Every extraction (workflow, harness, `tools.where` on a PDF) |
 | PDF bytes | Azure Document Intelligence **dev** resource (`prebuilt-layout`) | Never so far: `parse/azure_di.py` is written but no credentials exist. It refuses any file outside `data/golden/` and `data/synthetic/`. |
 | Mailbox read requests (sign-in, folder delta, message download) | Microsoft Graph | Only when the Graph monitor is enabled |
 | Nothing | Docling, OCR (RapidOCR), zen-engine, Postgres, Temporal | Run locally |

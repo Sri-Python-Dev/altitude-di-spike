@@ -17,7 +17,7 @@ def test_track_usage_records_metadata_only(monkeypatch):
     monkeypatch.setenv('OPENAI_API_KEY', 'test')
     with router.track_usage() as calls:
         router.route_and_call('extract_quote', {'instruction': 'SECRET PROMPT', 'content': 'SECRET DOC'}, Out)
-    assert calls == [{'task': 'extract_quote', 'model': 'gpt-4.1-nano', 'input_tokens': 700, 'output_tokens': 300,
+    assert calls == [{'task': 'extract_quote', 'model': router.model_prices('extract_quote')[0], 'input_tokens': 700, 'output_tokens': 300,
                       'latency_ms': calls[0]['latency_ms']}]
     assert 'SECRET' not in str(calls)
 

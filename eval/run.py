@@ -22,7 +22,8 @@ from eval.metrics import calculate
 from extract.boundaries import split_quotes
 from extract.errors import CorruptDocument, PasswordProtectedDocument, UnparseableDocument
 from extract.extractors import MODEL_TASKS
-from extract.pipeline import extract_quote
+from extract.ground import ground
+from extract.pipeline import extract_raw
 from llm.router import model_prices, track_usage
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -186,8 +187,11 @@ def run(datasets: list[Path], extractor: str, out_dir: Path = REPORTS, command: 
         segment = segments[g.get('segment', 1) - 1].model_copy(update={'document_id': g['document_id']})
         started = time.perf_counter()
         with track_usage() as doc_calls:
-            quote = extract_quote(segment, extractor)
-        return g, source, segments, segment, quote, time.perf_counter() - started, doc_calls
+            raw = extract_raw(segment, extractor)
+            quote = ground(raw, segment)
+        # The model's own claims, kept for confidence calibration (grounding empties rejected values).
+        claimed = {name: field.value for name, field in raw.fields()}
+        return g, source, segments, segment, quote, time.perf_counter() - started, doc_calls, claimed
 
     with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
         results = list(pool.map(extract_one, work))
@@ -196,7 +200,7 @@ def run(datasets: list[Path], extractor: str, out_dir: Path = REPORTS, command: 
     run_dir = out_dir / 'runs' / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
     from rules.engine import flags_for_quote
-    for g, source, segments, segment, quote, elapsed, doc_calls in results:
+    for g, source, segments, segment, quote, elapsed, doc_calls, claimed in results:
         # Per-document result, so the results page can open the exact extraction it scored.
         (run_dir / f"{g['document_id']}.json").write_text(json.dumps({
             'document_id': g['document_id'], 'run_id': run_id, 'extractor': extractor,
@@ -206,7 +210,7 @@ def run(datasets: list[Path], extractor: str, out_dir: Path = REPORTS, command: 
             'golden': g, 'flags': flags_for_quote(quote),
             'fields': [{'name': name, **field.model_dump(mode='json')} for name, field in quote.fields()]}, indent=1))
         gold.append(g)
-        pred.append({'fields': [{'name': name, **field.model_dump()} for name, field in quote.fields()]})
+        pred.append({'fields': [{'name': name, **field.model_dump(), 'claimed_value': claimed.get(name)} for name, field in quote.fields()]})
         latencies.append(elapsed)
         calls += doc_calls
         if 'case' in g:
@@ -283,6 +287,7 @@ def markdown(report: dict) -> str:
     for name, m in report['fields'].items():
         delta = f"{m['delta'] * 100:+.1f}" if m.get('delta') is not None else '—'
         lines.append(f"| {name} | {m['accuracy']:.1%} | {delta} | {m['grounded_rate']:.1%} | {m['evidence_match_rate']:.1%} | {m['ungrounded_rate']:.1%} | {m['missing_rate']:.1%} | {m['count']} |")
+    lines += calibration_markdown(report)
     ungrounded = {n: m for n, m in report['fields'].items() if m['ungrounded_count']}
     lines += ['', '## Ungrounded fields', '']
     if ungrounded:
@@ -297,6 +302,34 @@ def markdown(report: dict) -> str:
             grounded = f"{e['grounded_fields']}/{e['fields']}" if 'fields' in e else '—'
             lines.append(f"| {e['document_id']} | {e['case']} | {e['expected']} | {e['got']} | {grounded} | {'✅' if e['pass'] else '❌'} |")
     return '\n'.join(lines) + '\n'
+
+def calibration_markdown(report: dict) -> list[str]:
+    """Self-reported confidence against correctness. Analysis only: plain 0-1 numbers, never percentages,
+    never a rule input or score (prompt 04)."""
+    c = report.get('calibration')
+    out = ['', '## Confidence calibration (analysis only)', '',
+           "The model's self-reported confidence (0-1) against whether its claimed value was right, before grounding.",
+           'It never decides anything: not an input to rules or scores, and not shown in the app.', '']
+    if not c:
+        return out + ['No confidence values in this run (the extractor did not report any).']
+    auroc = c['auroc'] if c['auroc'] is not None else 'n/a (no wrong answers to compare)'
+    out += [f"- **Fields with a confidence:** {c['pairs']} ({c['right']} right, {c['wrong']} wrong)",
+            f"- **Expected calibration error:** {c['ece']} (0 = confidence matches accuracy)",
+            f"- **Brier score:** {c['brier']} (lower is better)",
+            f"- **Separates right from wrong (AUROC):** {auroc}",
+            f"- **Mean confidence:** right {c['mean_confidence_right']}, wrong {c['mean_confidence_wrong']}",
+            f"- **Wrong answers with confidence ≥ 0.9:** {c['overconfident_errors']}", '',
+            '| Confidence | Fields | Mean confidence | Share right |', '|---|---:|---:|---:|']
+    out += [f"| {b['from']:.1f}–{b['to']:.1f} | {b['count']} | {b['mean_confidence']} | {b['accuracy']} |" for b in c['reliability']]
+    if c['wrong'] < 10:
+        out += ['', f"With {c['wrong']} wrong answer(s), these numbers cannot show whether confidence predicts errors; "
+                'that needs a harder golden set.']
+    out += ['', '| Field | Coverage | ECE | Mean conf. right | Mean conf. wrong |', '|---|---:|---:|---:|---:|']
+    for name, m in report['fields'].items():
+        fc = m.get('calibration')
+        if fc:
+            out.append(f"| {name} | {m['confidence_coverage']} | {fc['ece']} | {fc['mean_confidence_right']} | {fc['mean_confidence_wrong'] if fc['mean_confidence_wrong'] is not None else '—'} |")
+    return out
 
 def write_baseline(report: dict, path: Path = ROOT / 'eval/baseline.json'):
     if report['smoke_test']:

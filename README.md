@@ -42,7 +42,7 @@ uv run python review_tool/review.py data/golden/quotes-v1 --reviewer "Name"   # 
 | Parse | `parse/docling_parser.py` (`parse/azure_di.py` ready, not run) | Text, headings, table cells with row/column, bboxes in PDF points (top-left). Typed errors for password-protected and corrupt PDFs. No text layer → OCR, `ocr=True`. |
 | Split | `extract/boundaries.py` | One segment per quote, across pages or on the same page. |
 | Classify | `extract/classify.py` | quote / po / invoice / other from the title and references. Non-quotes are stored as `not_a_quote` and not extracted. |
-| Extract | `extract/extractors.py`, `llm/router.py` | `current` (gpt-4.1-nano) / `frontier` (gpt-4.1); `golden-echo` for smoke tests. |
+| Extract | `extract/extractors.py`, `llm/router.py` | `current` (gpt-5.4-mini) / `frontier` (gpt-4.1); `golden-echo` for smoke tests. |
 | **Ground** | `extract/ground.py`, `extract/normalise.py` | Span found on the page (exact → whitespace → leaked delimiters trimmed → separators ignored); value must be readable from it; bbox from the exact element, anchored to the line item's row; stored span is always the document's own text. Currency: ISO code, or a symbol resolved through the supplier's currency on file. Otherwise `value=None` with a reason. |
 | Rules | `rules/quote_flags.json`, `rules/engine.py` | GoRules decision table (zen-engine): supplier currency on file; CURRENCY_MISMATCH, CURRENCY_UNRESOLVED, TOTAL_MISMATCH. Edited in the app (Rules). |
 | Persist | `extract/persistence.py`, `storage/postgres.py` | Refuses any ungrounded value (in code and by a database constraint); stores fields, evidence and flags in Postgres. |
@@ -56,7 +56,7 @@ in [docs/spikes/data-path.md](docs/spikes/data-path.md); results in
 ## Still open
 
 1. **Azure Document Intelligence (task 06).** Adapter, metrics and harness option are built and tested on a fake result; needs `AZURE_DI_ENDPOINT` / `AZURE_DI_KEY` (dev resource) to produce the Azure column of SP-13.
-2. **gpt-4.1-nano is deprecated by OpenAI.** Evaluate its successor or a Foundry deployment with the harness before choosing the model route.
+2. **Model route.** gpt-4.1-nano was switched off by OpenAI (27 Oct); the default is now gpt-5.4-mini, chosen on the harness (see sp-02). Evaluate a Foundry deployment the same way before the tenant move.
 3. **Gmail.** Not connected; CLAUDE.md forbids reading a real mailbox until that is decided. The inbox folder stands in for it.
 4. **Next-round flag rules** (two currencies in one table, price vs last quote): see [rules/README.md](rules/README.md).
 5. **Golden set:** the 20 quotes in `quotes-v1` are human-reviewed (Srini, 15 Oct); the synthetic edge-case labels are generator-made. `stated_total` has no golden answers yet.

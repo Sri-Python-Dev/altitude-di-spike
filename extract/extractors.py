@@ -50,13 +50,29 @@ class _ModelQuote(BaseModel):
     stated_total: _Number
     line_items: list[_ModelLineItem]
 
+def _clamp_confidence(data):
+    """raw_confidence into [0, 1] (models sometimes answer 95 for 0.95); anything unreadable becomes None."""
+    if isinstance(data, dict):
+        out = {k: _clamp_confidence(v) for k, v in data.items()}
+        if 'raw_confidence' in out:
+            c = out['raw_confidence']
+            if isinstance(c, (int, float)):
+                c = c / 100 if 1 < c <= 100 else c
+                out['raw_confidence'] = c if 0 <= c <= 1 else None
+            else:
+                out['raw_confidence'] = None
+        return out
+    if isinstance(data, list):
+        return [_clamp_confidence(v) for v in data]
+    return data
+
 def _model(task: str):
     def run(parsed: ParsedDocument) -> SupplierQuote:
         from llm.router import route_and_call
         # Content stays in this process; it is never a Temporal workflow argument.
         content = '\n'.join(f'Page {p.number}:\n{p.text}' for p in parsed.pages)
         answer = route_and_call(task, {'instruction': QUOTE_EXTRACTION, 'content': content}, _ModelQuote)
-        return SupplierQuote.model_validate(answer.model_dump())
+        return SupplierQuote.model_validate(_clamp_confidence(answer.model_dump()))
     return run
 
 @lru_cache(maxsize=1)

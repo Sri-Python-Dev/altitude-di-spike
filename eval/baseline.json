@@ -1,19 +1,14 @@
 {
   "extractor": "current",
-  "generated_at": "2026-10-13T23:02:25+00:00",
+  "generated_at": "2026-10-27T14:10:17+00:00",
   "datasets": [
     "data/golden/quotes-v1",
-    "data/synthetic/edge-cases"
+    "data/synthetic/edge-cases",
+    "data/synthetic"
   ],
   "fields": {
-    "supplier_name": {
-      "accuracy": 0.9643
-    },
-    "line_items[i].part_number_quoted": {
-      "accuracy": 0.9844
-    },
     "currency": {
-      "accuracy": 1.0
+      "accuracy": 0.9677
     },
     "incoterms": {
       "accuracy": 1.0
@@ -25,6 +20,9 @@
       "accuracy": 1.0
     },
     "line_items[i].moq": {
+      "accuracy": 1.0
+    },
+    "line_items[i].part_number_quoted": {
       "accuracy": 1.0
     },
     "line_items[i].quantity": {
@@ -40,6 +38,9 @@
       "accuracy": 1.0
     },
     "quote_reference": {
+      "accuracy": 1.0
+    },
+    "supplier_name": {
       "accuracy": 1.0
     },
     "valid_until": {

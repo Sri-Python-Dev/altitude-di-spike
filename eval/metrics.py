@@ -88,7 +88,55 @@ def _score(gf: dict, pf: dict | None) -> dict:
         'ungrounded': bool(pf) and not grounded and bool(pf.get('ungrounded_reason') or pf.get('ungrounded_span') or pf.get('verbatim_span')),
         'missing': missing,
         'reason': (pf or {}).get('ungrounded_reason'),
+        # Confidence calibration: the model's self-report against whether its own claim was right.
+        'confidence': (pf or {}).get('raw_confidence'),
+        'claimed_correct': _claimed_correct(gf, pf),
     }
+
+def _claimed_correct(gf: dict, pf: dict | None) -> bool | None:
+    """Was the model's claimed value right, before grounding? None when it claimed nothing."""
+    if not pf:
+        return None
+    claimed = pf.get('claimed_value', pf.get('value'))
+    return None if claimed is None else normalize(claimed) == normalize(gf['value'])
+
+BINS = 10
+
+def calibration(pairs: list[tuple[float, bool]]) -> dict | None:
+    """How well self-reported confidence matches observed correctness. pairs: (confidence 0-1, correct).
+
+    ece:   expected calibration error, 10 equal-width bins; 0 = confidence matches accuracy exactly
+    brier: mean squared gap between confidence and the 0/1 outcome; lower is better
+    auroc: chance a random right answer has higher confidence than a random wrong one (0.5 = no signal);
+           None when there are no wrong answers (or no right ones) to compare
+    """
+    if not pairs:
+        return None
+    n = len(pairs)
+    bins = []
+    for b in range(BINS):
+        lo, hi = b / BINS, (b + 1) / BINS
+        inside = [(c, y) for c, y in pairs if lo <= c < hi or (b == BINS - 1 and c == 1.0)]
+        if inside:
+            bins.append({'from': lo, 'to': hi, 'count': len(inside),
+                         'mean_confidence': round(sum(c for c, _ in inside) / len(inside), 4),
+                         'accuracy': round(sum(y for _, y in inside) / len(inside), 4)})
+    ece = sum(b['count'] / n * abs(b['accuracy'] - b['mean_confidence']) for b in bins)
+    brier = sum((c - y) ** 2 for c, y in pairs) / n
+    right = [c for c, y in pairs if y]
+    wrong = [c for c, y in pairs if not y]
+    auroc = None
+    if right and wrong:
+        wins = sum((r > w) + 0.5 * (r == w) for r in right for w in wrong)
+        auroc = round(wins / (len(right) * len(wrong)), 4)
+    return {'pairs': n, 'right': len(right), 'wrong': len(wrong), 'ece': round(ece, 4), 'brier': round(brier, 4),
+            'auroc': auroc, 'mean_confidence_right': round(sum(right) / len(right), 4) if right else None,
+            'mean_confidence_wrong': round(sum(wrong) / len(wrong), 4) if wrong else None,
+            'overconfident_errors': sum(1 for c in wrong if c >= 0.9), 'reliability': bins}
+
+def _pairs(rows: list[dict]) -> list[tuple[float, bool]]:
+    return [(float(r['confidence']), bool(r['claimed_correct'])) for r in rows
+            if r['confidence'] is not None and r['claimed_correct'] is not None]
 
 def calculate(golden: list[dict], predicted: list[dict], latencies: list[float] | None = None):
     grouped = defaultdict(list)
@@ -130,12 +178,18 @@ def calculate(golden: list[dict], predicted: list[dict], latencies: list[float] 
                         'ungrounded_count': sum(r['ungrounded'] for r in rows),
                         'ungrounded_reasons': dict(reasons),
                         'worst_doc': worst_doc, 'worst_doc_accuracy': round(worst_rate, 4) if worst_doc else None,
-                        'worst_doc_field': worst_field}
+                        'worst_doc_field': worst_field,
+                        # Analysis only: never an input to rules or scores, never shown in the app.
+                        'confidence_coverage': round(len(_pairs(rows)) / sum(1 for r in rows if r['claimed_correct'] is not None), 4)
+                                               if any(r['claimed_correct'] is not None for r in rows) else None,
+                        'calibration': calibration(_pairs(rows))}
     times = sorted(latencies or [])
     def percentile(p):
         if not times: return None
         return round(times[min(len(times)-1, max(0, int((len(times)-1)*p + 0.5)))], 3)
     ordered = dict(sorted(fields.items(), key=lambda kv: (kv[1]['accuracy'], kv[1]['grounded_rate'], kv[0])))
+    all_rows = [r for rows in grouped.values() for r in rows]
     return {'document_count': len(golden), 'fields': ordered,
             'worst_fields': list(ordered)[:3],
+            'calibration': calibration(_pairs(all_rows)),
             'p50_latency_s': percentile(.5), 'p95_latency_s': percentile(.95)}

@@ -16,6 +16,27 @@
       "worst_doc": "quote-g-dollar",
       "worst_doc_accuracy": 0.0,
       "worst_doc_field": "currency",
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 31,
+        "right": 30,
+        "wrong": 1,
+        "ece": 0.0223,
+        "brier": 0.0311,
+        "auroc": 1.0,
+        "mean_confidence_right": 0.9903,
+        "mean_confidence_wrong": 0.98,
+        "overconfident_errors": 1,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 31,
+            "mean_confidence": 0.99,
+            "accuracy": 0.9677
+          }
+        ]
+      },
       "previous_accuracy": 0.9677,
       "delta": 0.0
     },
@@ -32,8 +53,29 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
-      "previous_accuracy": 1.0,
-      "delta": 0.0
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 31,
+        "right": 31,
+        "wrong": 0,
+        "ece": 0.0097,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9903,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 31,
+            "mean_confidence": 0.9903,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "previous_accuracy": 0.9677,
+      "delta": 0.0323
     },
     "line_items[i].extended_price": {
       "label": "Extended price",
@@ -48,6 +90,27 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 69,
+        "right": 69,
+        "wrong": 0,
+        "ece": 0.0096,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9904,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 69,
+            "mean_confidence": 0.9904,
+            "accuracy": 1.0
+          }
+        ]
+      },
       "previous_accuracy": 1.0,
       "delta": 0.0
     },
@@ -64,6 +127,27 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 69,
+        "right": 69,
+        "wrong": 0,
+        "ece": 0.0096,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9904,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 69,
+            "mean_confidence": 0.9904,
+            "accuracy": 1.0
+          }
+        ]
+      },
       "previous_accuracy": 1.0,
       "delta": 0.0
     },
@@ -80,6 +164,27 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 69,
+        "right": 69,
+        "wrong": 0,
+        "ece": 0.0096,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9904,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 69,
+            "mean_confidence": 0.9904,
+            "accuracy": 1.0
+          }
+        ]
+      },
       "previous_accuracy": 1.0,
       "delta": 0.0
     },
@@ -96,6 +201,27 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 69,
+        "right": 69,
+        "wrong": 0,
+        "ece": 0.0096,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9904,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 69,
+            "mean_confidence": 0.9904,
+            "accuracy": 1.0
+          }
+        ]
+      },
       "previous_accuracy": 1.0,
       "delta": 0.0
     },
@@ -112,6 +238,27 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 69,
+        "right": 69,
+        "wrong": 0,
+        "ece": 0.0096,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9904,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 69,
+            "mean_confidence": 0.9904,
+            "accuracy": 1.0
+          }
+        ]
+      },
       "previous_accuracy": 1.0,
       "delta": 0.0
     },
@@ -128,6 +275,27 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 69,
+        "right": 69,
+        "wrong": 0,
+        "ece": 0.0096,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9904,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 69,
+            "mean_confidence": 0.9904,
+            "accuracy": 1.0
+          }
+        ]
+      },
       "previous_accuracy": 1.0,
       "delta": 0.0
     },
@@ -144,8 +312,29 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
-      "previous_accuracy": 1.0,
-      "delta": 0.0
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 31,
+        "right": 31,
+        "wrong": 0,
+        "ece": 0.0097,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9903,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 31,
+            "mean_confidence": 0.9903,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "previous_accuracy": 0.9677,
+      "delta": 0.0323
     },
     "quote_date": {
       "label": "Quote date",
@@ -160,8 +349,29 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
-      "previous_accuracy": 1.0,
-      "delta": 0.0
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 31,
+        "right": 31,
+        "wrong": 0,
+        "ece": 0.0097,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9903,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 31,
+            "mean_confidence": 0.9903,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "previous_accuracy": 0.9677,
+      "delta": 0.0323
     },
     "quote_reference": {
       "label": "Quote reference",
@@ -176,8 +386,29 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
-      "previous_accuracy": 1.0,
-      "delta": 0.0
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 31,
+        "right": 31,
+        "wrong": 0,
+        "ece": 0.0097,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9903,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 31,
+            "mean_confidence": 0.9903,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "previous_accuracy": 0.9677,
+      "delta": 0.0323
     },
     "supplier_name": {
       "label": "Supplier",
@@ -192,6 +423,27 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 31,
+        "right": 31,
+        "wrong": 0,
+        "ece": 0.0097,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9903,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 31,
+            "mean_confidence": 0.9903,
+            "accuracy": 1.0
+          }
+        ]
+      },
       "previous_accuracy": 1.0,
       "delta": 0.0
     },
@@ -208,8 +460,29 @@
       "worst_doc": null,
       "worst_doc_accuracy": null,
       "worst_doc_field": null,
-      "previous_accuracy": 1.0,
-      "delta": 0.0
+      "confidence_coverage": 1.0,
+      "calibration": {
+        "pairs": 31,
+        "right": 31,
+        "wrong": 0,
+        "ece": 0.0097,
+        "brier": 0.0001,
+        "auroc": null,
+        "mean_confidence_right": 0.9903,
+        "mean_confidence_wrong": null,
+        "overconfident_errors": 0,
+        "reliability": [
+          {
+            "from": 0.9,
+            "to": 1.0,
+            "count": 31,
+            "mean_confidence": 0.9903,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "previous_accuracy": 0.9677,
+      "delta": 0.0323
     }
   },
   "worst_fields": [
@@ -217,21 +490,41 @@
     "incoterms",
     "line_items[i].extended_price"
   ],
-  "p50_latency_s": 4.259,
-  "p95_latency_s": 9.667,
-  "usage": {
-    "model": "gpt-4.1-nano",
-    "calls": 31,
-    "input_tokens": 28897,
-    "output_tokens": 27251,
-    "input_tokens_per_doc": 932,
-    "output_tokens_per_doc": 879,
-    "usd_per_100_docs": 0.0445
+  "calibration": {
+    "pairs": 631,
+    "right": 630,
+    "wrong": 1,
+    "ece": 0.008,
+    "brier": 0.0016,
+    "auroc": 1.0,
+    "mean_confidence_right": 0.9904,
+    "mean_confidence_wrong": 0.98,
+    "overconfident_errors": 1,
+    "reliability": [
+      {
+        "from": 0.9,
+        "to": 1.0,
+        "count": 631,
+        "mean_confidence": 0.9904,
+        "accuracy": 0.9984
+      }
+    ]
   },
-  "run_id": "current-20261016T115836Z",
-  "previous_run_id": "current-20261016T115617Z",
+  "p50_latency_s": 4.755,
+  "p95_latency_s": 6.491,
+  "usage": {
+    "model": "gpt-5.4-mini",
+    "calls": 31,
+    "input_tokens": 30540,
+    "output_tokens": 20807,
+    "input_tokens_per_doc": 985,
+    "output_tokens_per_doc": 671,
+    "usd_per_100_docs": 0.3759
+  },
+  "run_id": "current-20261027T141017Z",
+  "previous_run_id": "current-20261027T140845Z",
   "extractor": "current",
-  "model": "gpt-4.1-nano",
+  "model": "gpt-5.4-mini",
   "parser": "docling 2.138.0",
   "datasets": [
     "data/golden/quotes-v1",
@@ -259,8 +552,8 @@
     "Srini",
     "synthetic-generator tools/make_synthetic.py (values known by construction)"
   ],
-  "git_commit": null,
-  "command": "uv run python -m eval.run --dataset data/golden/quotes-v1 --dataset data/synthetic/edge-cases --dataset data/synthetic --extractor current",
+  "git_commit": "206a570",
+  "command": "uv run python -m eval.run --dataset data/golden/quotes-v1 --dataset data/synthetic/edge-cases --dataset data/synthetic --extractor current --write-baseline",
   "edge_cases": [
     {
       "document_id": "corrupt",
@@ -417,6 +710,6 @@
     }
   ],
   "smoke_test": false,
-  "generated_at": "2026-10-16T11:58:36+00:00",
-  "duration_s": 20.7
+  "generated_at": "2026-10-27T14:10:17+00:00",
+  "duration_s": 21.2
 }
